@@ -1,0 +1,133 @@
+{
+  "category": "Cejas, Pestañas y Micropigmentación",
+  "services": [
+      {
+        "id": 1,
+        "subcategory": "Micropigmentación Cejas",
+        "title": "Microblading",
+        "description": "Tratamiento de cejas que incluye diseño, y planchado de cejas.",
+        "images": ["/placeholder.svg"], 
+        "price": 350
+      },
+      {
+        "id": 2,
+        "subcategory": "Micropigmentación Cejas",
+        "title": "Microshading",
+        "description": "Tratamiento hidratante que restaura la humedad de la piel y mejora su elasticidad.",
+        "images": ["/placeholder.svg"],
+        "price": 180
+      },
+      {
+        "id": 3,
+        "subcategory": "Micropigmentación",
+        "title": "Micropigmentación Tecnica Hibrida",
+        "description": "Masaje relajación.",
+        "images": ["/placeholder.svg"],
+        "price": 180
+      },
+      {
+        "id": 4,
+        "subcategory": "Micropigmentación Cejas",
+        "title": "Hiperrealismo",
+        "description": "Masaje",
+        "images": ["/placeholder.svg"],
+        "price": 0
+      },
+      {
+        "id": 4,
+        "subcategory": "Micropigmentación",
+        "title": "Delineado Labios",
+        "description": "Masaje",
+        "images": ["/placeholder.svg"],
+        "price": 180
+      },
+      {
+        "id": 5,
+        "subcategory": "Micropigmentación",
+        "title": "Delineado Parpados",
+        "description": "Masaje",
+        "images": ["/placeholder.svg"],
+        "price": 120
+      },
+      {
+        "id": 6,
+        "subcategory": "Micropigmentación",
+        "title": "Libs Full Color",
+        "description": "Masaje",
+        "images": ["/placeholder.svg"],
+        "price": 100
+      },
+      {
+        "id": 7,
+        "subcategory": "Micropigmentación",
+        "title": "Tricopigmentación",
+        "description": "Masaje",
+        "images": ["/placeholder.svg"],
+        "price": 80
+      },
+      {
+        "id": 8,
+        "subcategory": "Cejas",
+        "title": "Cejas Diseño con Hena",
+        "description": "Masaje",
+        "images": ["/placeholder.svg"],
+        "price": 150
+      },
+      {
+        "id": 9,
+        "subcategory": "Cejas",
+        "title": "Cejas planchado",
+        "description": "Masaje",
+        "images": ["/placeholder.svg"],
+        "price": 80
+      },
+      {
+        "id": 10,
+        "subcategory": "Pestañas",
+        "title": "Pestañas 3D",
+        "description": "Masaje",
+        "images": ["/placeholder.svg"],
+        "price": 80
+      },
+      {
+        "id": 11,
+        "subcategory": "Pestañas",
+        "title": "Pestañas Tiras",
+        "description": "Masaje",
+        "images": ["/placeholder.svg"],
+        "price": 80
+      },
+      {
+        "id": 12,
+        "subcategory": "Pestañas",
+        "title": "Pestañas Postiazas",
+        "description": "Masaje",
+        "images": ["/placeholder.svg"],
+        "price": 80
+      },
+      {
+        "id": 13,
+        "subcategory": "Pestañas",
+        "title": "Pestañas Rizado",
+        "description": "Masaje",
+        "images": ["/placeholder.svg"],
+        "price": 80
+      },
+      {
+        "id": 14,
+        "subcategory": "Pestañas",
+        "title": "Pestañas Rizado + Tinturación",
+        "description": "Masaje",
+        "images": ["/placeholder.svg"],
+        "price": 80
+      },
+      {
+        "id": 15,
+        "subcategory": "Pestañas",
+        "title": "Pestañas Lifting",
+        "description": "Masaje",
+        "images": ["/placeholder.svg"],
+        "price": 80
+      }
+    ]
+  }

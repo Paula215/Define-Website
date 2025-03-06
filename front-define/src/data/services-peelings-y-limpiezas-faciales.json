@@ -1,0 +1,79 @@
+{
+  "category": "peelings-y-limpiezas-faciales",
+  "displayName": "Peelings y Limpiezas Faciales",
+  "services": [
+      {
+        "id": 1,
+        "subcategory": "Pelling",
+        "title": "Pelling Quimico Antiacne",
+        "description": "Tratamiento de cejas que incluye diseño, y planchado de cejas.",
+        "images": ["/src/assets/images/services/faciales/peeling1-1.jpg","/src/assets/images/services/faciales/facial1-1.jpg"], 
+        "price": 180
+      },
+      {
+        "id": 2,
+        "subcategory": "Pelling",
+        "title": "Pelling Quimico Despigmentante",
+        "description": "Tratamiento hidratante que restaura la humedad de la piel y mejora su elasticidad.",
+        "images": ["/src/assets/images/services/faciales/peeling1-1.jpg","/src/assets/images/services/faciales/facial1-1.jpg"], 
+        "price": 180
+      },
+      {
+        "id": 3,
+        "subcategory": "Pelling",
+        "title": "Pelling Quimico Roseasea",
+        "description": "Masaje relajación.",
+        "images": ["/src/assets/images/services/faciales/peeling1-1.jpg","/src/assets/images/services/faciales/facial1-1.jpg"], 
+        "price": 180
+      },
+      {
+        "id": 4,
+        "subcategory": "Pelling",
+        "title": "Pelling Quimico Antienvegecimiento",
+        "description": "Masaje",
+        "images": ["/src/assets/images/services/faciales/peeling1-1.jpg","/src/assets/images/services/faciales/facial1-1.jpg"], 
+        "price": 180
+      },
+      {
+        "id": 5,
+        "subcategory": "Pelling",
+        "title": "Pelling Quimico Antienvegecimiento",
+        "description": "Masaje",
+        "images": ["/flores-landing.jpg"], 
+        "price": 180
+      },
+      {
+        "id": 6,
+        "subcategory": "Facial",
+        "title": "Facial Punta diamante",
+        "description": "Masaje",
+        "images": ["/flores-landing.jpg"], 
+        "price": 120
+      },
+      {
+        "id": 7,
+        "subcategory": "Facial",
+        "title": "Facial Básico",
+        "description": "Masaje",
+        "images": ["/flores-landing.jpg"], 
+        "price": 100
+      },
+      {
+        "id": 8,
+        "subcategory": "Facial",
+        "title": "Facial Define",
+        "description": "Masaje",
+        "images": ["/flores-landing.jpg"], 
+        "price": 80
+      },
+      {
+        "id": 9,
+        "subcategory": "Facial",
+        "title": "Hidro Facial",
+        "description": "Masaje",
+        "images": ["/flores-landing.jpg"], 
+        "price": 150
+      }
+      
+    ]
+  }

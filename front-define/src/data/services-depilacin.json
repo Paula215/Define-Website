@@ -1,0 +1,53 @@
+{
+  "category": "Depilacion",
+  "services": [
+      {
+        "id": 1,
+        "subcategory": "Depilación Corporal",
+        "title": "Depilación Piernas",
+        "description": "Tratamiento de cejas que incluye diseño, y planchado de cejas.",
+        "images": ["/flores-landing.jpg"], 
+        "price": 80
+      },
+      {
+        "id": 2,
+        "subcategory": "Depilación Corporal",
+        "title": "Depilación Axila",
+        "description": "Tratamiento hidratante que restaura la humedad de la piel y mejora su elasticidad.",
+        "images": ["/flores-landing.jpg"], 
+        "price": 25
+      },
+      {
+        "id": 3,
+        "subcategory": "Depilación Corporal",
+        "title": "Depilación Brazos",
+        "description": "Masaje relajación.",
+        "images": ["/flores-landing.jpg"], 
+        "price": 60
+      },
+      {
+        "id": 4,
+        "subcategory": "Depilación Facial",
+        "title": "Depilación Facial",
+        "description": "Masaje",
+        "images": ["/flores-landing.jpg"], 
+        "price": 50
+      },
+      {
+        "id": 5,
+        "subcategory": "Depilación Facial",
+        "title": "Depilación Cejas",
+        "description": "Masaje",
+        "images": ["/flores-landing.jpg"], 
+        "price": 15
+      },
+      {
+        "id": 6,
+        "subcategory": "Depilación Facial",
+        "title": "Depilación Bozo",
+        "description": "Masaje",
+        "images": ["/flores-landing.jpg"], 
+        "price": 15
+      }
+    ]
+  }

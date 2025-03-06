@@ -1,4 +1,5 @@
-import { Card, CardContent } from '../../components/ui/card';
+import { Link } from 'react-router-dom';
+import { Card, CardContent } from '../ui/card';
 import Body from '../../assets/images/icons/body.jpg';
 import Depi from '../../assets/images/icons/depi.jpg';
 import Skin from '../../assets/images/icons/skincare.jpg';
@@ -8,67 +9,76 @@ import Micropigmantation from '../../assets/images/icons/lashing.jpg';
 export default function Services() {
   const services = [
     {
-      image: <img src={Skin} alt="Peelings y Limpiezas faciales" className="w-24 h-24 md:w-15 md:h-15 rounded-full " />,
+      image: Skin,
       title: "Peelings y Limpiezas faciales",
       description: "Elimina impurezas, manchas y signos de envejecimiento para un rostro luminoso.",
+      link: "/services/peelings-y-limpiezas-faciales"
     },
     {
-      image: <img src={Eye} alt="Cejas, Pestañas y Micropigmentación" className="w-24 h-24 md:w-15 md:h-15 rounded-full" />,
+      image: Eye,
       title: "Cejas, Pestañas y Micropigmentación",
       description: "Realza tu mirada con diseño de cejas, extensiones de pestañas y micropigmentación.",
+      link: "/services/cejas-pestaas-y-micropigmentacin"
     },
     {
-      image: <img src={Micropigmantation} alt="Rejuvenecimiento" className="w-24 h-24 md:w-15 md:h-15 rounded-full" />,
+      image: Micropigmantation,
       title: "Rejuvenecimiento",
       description: "Tratamientos para reducir arrugas, mejorar firmeza y revitalizar tu piel.",
+      link: "/services/rejuvenecimiento"
     },
     {
-      image: <img src={Depi} alt="Depilación" className="w-24 h-24 md:w-15 md:h-15 rounded-full" />,
+      image: Depi,
       title: "Depilación",
       description: "Piel suave y libre de vello con técnicas seguras y efectivas.",
+      link: "/services/depilacin"
     },
     {
-      image: <img src={Body} alt="Tratamientos Reductores y esteticos" className="w-24 h-24 md:w-15 md:h-15 rounded-full" />,
+      image: Body,
       title: "Tratamientos Reductores y esteticos",
       description: "Moldea tu cuerpo con mesoterapia, carboxiterapia y reafirmantes.",
+      link: "/services/tratamientos-reductores-y-estticos"
     },
     {
-      image: <img src={Body} alt="Aplicaciones Intravenosas" className="w-24 h-24 md:w-15 md:h-15 rounded-full" />,
+      image: Body,
       title: "Aplicaciones Intravenosas",
       description: "Vitaminas y cócteles para mejorar energía, inmunidad y apariencia.",
+      link: "/services/aplicaciones-intravenosa"
     },
   ];
 
   return (
     <section className="py-10 bg-hueso">
-      {/* Título principal */}
       <h2 className="text-2xl md:text-4xl lg:text-5xl text-center font-secondary text-morado mb-4 py-1">
         Nuestros servicios
       </h2>
-      {/* Descripción general */}
       <p className="text-center text-gray-700 py-10 text-sm md:text-2xl lg:text-3xl">
         Conoce todos los servicios que ofrecemos para ti.
       </p>
   
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
         {services.map((service, index) => (
-          <Card key={index} className="bg-gris w-full max-w-max min-h-min mx-auto">
-            <CardContent className="space-x-4 py-10">
-              {service.image}
-              <div>
-                {/* Título de cada servicio */}
-                <h3 className="text-xl md:text-3xl py-6 text-center text-morado font-secondary">
-                  {service.title}
-                </h3>
-                {/* Descripción de cada servicio */}
-                <p className="text-plomo text-sm md:text-2xl text-center">
-                  {service.description}
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+          <Link to={service.link} key={index} className="w-full max-w-max">
+            <Card className="bg-gris w-full min-h-min mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer">
+              <CardContent className="space-x-4 py-10 flex flex-col items-center">
+                <img 
+                  src={service.image || "/placeholder.svg"} 
+                  alt={service.title} 
+                  className="w-24 h-24 md:w-15 md:h-15 rounded-full"
+                />
+                <div className="text-center">
+                  <h3 className="text-xl md:text-3xl py-6 text-morado font-secondary">
+                    {service.title}
+                  </h3>
+                  <p className="text-plomo text-sm md:text-2xl">
+                    {service.description}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </Link>
         ))}
       </div>
     </section>
   );
 }
+
