@@ -8,7 +8,7 @@ export default function NosotrosSection() {
           {/* Información de contacto */}
           <div className="space-y-8 flex flex-col items-center md:items-start">
             <div className="text-center md:text-left w-full">
-              <h2 className="text-xl md:text-4xl font-secondary text-morado mb-4 py-1">Dirección</h2>              
+              <h2 className="text-xl md:text-2xl font-secondary text-morado mb-4 py-1">Dirección</h2>              
               <div className="flex items-start gap-2 text-plomo justify-center md:justify-start">
                 <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
                 <div>
@@ -19,7 +19,7 @@ export default function NosotrosSection() {
             </div>
 
             <div className="text-center md:text-left w-full">
-              <h2 className="text-xl md:text-4xl font-secondary text-morado mb-4 py-1">Teléfono:</h2>
+              <h2 className="text-xl md:text-2xl font-secondary text-morado mb-4 py-1">Teléfono:</h2>
               <div className="flex items-center gap-2 text-plomo justify-center md:justify-start">
                 <Phone className="w-5 h-5" />
                 <a href="tel: 958 336 208" className="hover:text-morado">
@@ -29,7 +29,7 @@ export default function NosotrosSection() {
             </div>
 
             <div className="text-center md:text-left w-full">
-              <h2 className="text-xl md:text-4xl font-secondary text-morado mb-4 py-1">Horario de atención:</h2>
+              <h2 className="text-xl md:text-2xl font-secondary text-morado mb-4 py-1">Horario de atención:</h2>
               <div className="flex items-center gap-2 text-plomo justify-center md:justify-start">
                 <Clock className="w-5 h-5" />
                 <div>
@@ -40,7 +40,7 @@ export default function NosotrosSection() {
             </div>
 
             <div className="text-center md:text-left w-full">
-              <h2 className="text-xl md:text-4xl font-secondary text-morado mb-4 py-1">Mis perfiles:</h2>
+              <h2 className="text-xl md:text-2xl font-secondary text-morado mb-4 py-1">Mis perfiles:</h2>
               <div className="flex gap-4 justify-center md:justify-start">
                 <a 
                   href="https://wa.me/51958336208" 

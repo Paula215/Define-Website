@@ -15,7 +15,7 @@ const Hero = () => {
 
       {/* Texto superpuesto */}
       <div className="absolute top-16 right-6 md:right-12 md:inset-y-0 md:flex md:items-center md:justify-center lg:left-34 px-5">
-        <h1 className="font-secondary text-2xl md:text-8xl lg:text-7xl text-white font-bold drop-shadow-lg md:text-center max-w-[100px] md:max-w-3xl">
+        <h1 className="font-secondary text-2xl md:text-4xl lg:text-4xl text-white font-bold drop-shadow-lg md:text-center max-w-[100px] md:max-w-3xl">
           Define y realza tu belleza natural
         </h1>
       </div>

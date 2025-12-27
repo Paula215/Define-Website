@@ -3,10 +3,14 @@ import { FaCaretRight } from "react-icons/fa";
 import PropTypes from 'prop-types';
 
 const SubmenuItem = ({ item, activeSubDropdown, toggleSubDropdown }) => {
+  const linkTo = item.submenu
+    ? item.link
+    : `${item.link}?subcategory=${encodeURIComponent(item.title)}`;
+
   return (
     <div className="relative group">
       <Link
-        to={item.link}
+        to={linkTo}
         className="px-4 py-2 text-lg text-gray-700 hover:bg-lila hover:text-morado flex justify-between items-center"
         role="menuitem"
         onClick={(e) => item.submenu && toggleSubDropdown(item.id, e)}

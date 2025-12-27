@@ -29,9 +29,8 @@ const Navbar = () => {
           <DesktopMenu 
             navLinks={NavLinks}
             activeDropdown={activeDropdown}
-            setActiveDropdown={setActiveDropdown}
+            toggleDropdown={toggleDropdown}
             activeSubDropdown={activeSubDropdown}
-            setActiveSubDropdown={setActiveSubDropdown}
             toggleSubDropdown={toggleSubDropdown}
           />
 

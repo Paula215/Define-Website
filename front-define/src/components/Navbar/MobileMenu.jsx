@@ -24,7 +24,7 @@ const MobileMenu = ({ navLinks, activeDropdown, toggleDropdown, activeSubDropdow
               {item.submenu.map((subItem) => (
                 <div key={subItem.id}>
                   <Link
-                    to={subItem.link}
+                    to={subItem.submenu ? subItem.link : `${subItem.link}?subcategory=${encodeURIComponent(subItem.title)}`}
                     className="w-full flex items-center justify-between text-gray-600 hover:text-morado px-3 py-2 text-base"
                     onClick={(e) => subItem.submenu && toggleSubDropdown(subItem.id, e)}
                   >
@@ -40,7 +40,7 @@ const MobileMenu = ({ navLinks, activeDropdown, toggleDropdown, activeSubDropdow
                       {subItem.submenu.map((subSubItem) => (
                         <Link
                           key={subSubItem.id}
-                          to={subSubItem.link}
+                          to={`${subSubItem.link}?subcategory=${encodeURIComponent(subSubItem.title)}`}
                           className="block px-3 py-2 text-base text-gray-500 hover:text-morado"
                         >
                           {subSubItem.title}
