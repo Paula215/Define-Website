@@ -18,7 +18,7 @@ export default function Services() {
       image: Eye,
       title: "Cejas, Pestañas y Micropigmentación",
       description: "Realza tu mirada con diseño de cejas, extensiones de pestañas y micropigmentación.",
-      link: "/services/cejas-pestaas-y-micropigmentacin"
+      link: "/services/cejas-pestanas-y-micropigmentacin"
     },
     {
       image: Micropigmantation,
@@ -30,13 +30,13 @@ export default function Services() {
       image: Depi,
       title: "Depilación",
       description: "Piel suave y libre de vello con técnicas seguras y efectivas.",
-      link: "/services/depilacin"
+      link: "/services/depilacion"
     },
     {
       image: Body,
       title: "Tratamientos Reductores y esteticos",
       description: "Moldea tu cuerpo con mesoterapia, carboxiterapia y reafirmantes.",
-      link: "/services/tratamientos-reductores-y-estticos"
+      link: "/services/tratamientos-reductores-y-esteticos"
     },
     {
       image: Body,

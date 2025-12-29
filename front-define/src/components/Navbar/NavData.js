@@ -56,9 +56,9 @@ export const NavLinks = [
         submenu: [
           { 
             id: "subservice-1", 
-            title: "Peelings", 
+            title: "peeling", 
             link: "/services/peelings-limpiezas-faciales/peelings",
-            slug: "peelings"
+            slug: "peeling"
           },
           { 
             id: "subservice-2", 

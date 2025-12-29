@@ -3,75 +3,43 @@
   "services": [
       {
         "id": 1,
-        "subcategory": "Pelling",
-        "title": "Pelling Quimico Antiacne",
+        "subcategory": "Rejuvenecimiento",
+        "title": "Rejuvenecimiento",
         "description": "Tratamiento de cejas que incluye diseño, y planchado de cejas.",
         "images": ["/placeholder.svg"], 
         "price": 180
       },
       {
         "id": 2,
-        "subcategory": "Pelling",
-        "title": "Pelling Quimico Despigmentante",
+        "subcategory": "Rejuvenecimiento",
+        "title": "Rejuvenecimiento",
         "description": "Tratamiento hidratante que restaura la humedad de la piel y mejora su elasticidad.",
         "images": ["/placeholder.svg"],
         "price": 180
       },
       {
         "id": 3,
-        "subcategory": "Pelling",
-        "title": "Pelling Quimico Roseasea",
+        "subcategory": "Rejuvenecimiento",
+        "title": "peeling Quimico Roseasea",
         "description": "Masaje relajación.",
         "images": ["/placeholder.svg"],
         "price": 180
       },
       {
         "id": 4,
-        "subcategory": "Pelling",
-        "title": "Pelling Quimico Antienvegecimiento",
-        "description": "Masaje",
-        "images": ["/placeholder.svg"],
-        "price": 180
-      },
-      {
-        "id": 4,
-        "subcategory": "Pelling",
-        "title": "Pelling Quimico Antienvegecimiento",
+        "subcategory": "Rejuvenecimiento",
+        "title": "Rejuvenecimiento",
         "description": "Masaje",
         "images": ["/placeholder.svg"],
         "price": 180
       },
       {
         "id": 5,
-        "subcategory": "Facial",
-        "title": "Facial Punta diamante",
+        "subcategory": "Rejuvenecimiento",
+        "title": "Rejuvenecimiento",
         "description": "Masaje",
         "images": ["/placeholder.svg"],
-        "price": 120
-      },
-      {
-        "id": 6,
-        "subcategory": "Facial",
-        "title": "Facial Básico",
-        "description": "Masaje",
-        "images": ["/placeholder.svg"],
-        "price": 100
-      },
-      {
-        "id": 7,
-        "subcategory": "Facial",
-        "title": "Facial Define",
-        "description": "Masaje",
-        "images": ["/placeholder.svg"],
-        "price": 80
-      },
-      {
-        "id": 8,
-        "subcategory": "Facial",
-        "title": "Hidro Facial",
-        "description": "Masaje",
-        "images": ["/placeholder.svg"],
-        "price": 150
+        "price": 180
       }
     ]
   }

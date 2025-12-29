@@ -1,158 +1,133 @@
+const servicesModules = import.meta.glob("../../data/services-*.json");
 import { useState, useEffect } from "react";
-import { useParams, useSearchParams, Link } from "react-router-dom";
+import { useParams, useSearchParams, Link, useNavigate } from "react-router-dom";
 import ServiceCard from "../ui/ServiceCard";
 
-// ========================================
-// MAPEO: Slug normalizado → Nombre de archivo JSON
-// ========================================
-const FILE_MAP = {
-  'aplicaciones-intravenosas': 'services-aplicaciones-intravenosas.json',
-  'cejas-pestanas-micropigmentacion': 'services-cejas-pestanas-micropigmentacion.json',
-  'depilacion': 'services-depilacion.json',
-  'peelings-limpiezas-faciales': 'services-peelings-y-limpiezas-faciales.json',
-  'rejuvenecimiento': 'services-rejuvenecimiento.json',
-  'tratamientos-reductores-esteticos': 'services-tratamientos-reductores-esteticos.json',
+// Constantes y funciones auxiliares
+const CATEGORIES = [
+  "Peelings y Limpiezas Faciales",
+  "Cejas, Pestañas y Micropigmentación",
+  "Rejuvenecimiento",
+  "Depilación",
+  "Tratamientos Reductores y Estéticos",
+  "Aplicaciones Intravenosa",
+];
+
+// Función para normalizar categorías para URLs y archivos
+const normalizeCategory = (category) => {
+  return category
+    ?.toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "");
 };
-
-// Lista de categorías para mostrar títulos bonitos
-const CATEGORIES_DISPLAY = {
-  'aplicaciones-intravenosas': 'Aplicaciones Intravenosas',
-  'cejas-pestanas-micropigmentacion': 'Cejas, Pestañas y Micropigmentación',
-  'depilacion': 'Depilación',
-  'peelings-limpiezas-faciales': 'Peelings y Limpiezas Faciales',
-  'rejuvenecimiento': 'Rejuvenecimiento',
-  'tratamientos-reductores-esteticos': 'Tratamientos Reductores y Estéticos',
-};
-
-// Importar todos los JSON de forma dinámica
-const servicesModules = import.meta.glob("../../data/services-*.json");
-
-// Función para normalizar strings (solo para comparación)
-const normalizeString = (str) =>
-  String(str || "")
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/\p{Diacritic}/gu, "")
-    .replace(/[^a-z0-9]/g, "")
-    .replace(/s$/i, "");
 
 export default function ServicesPage() {
-  const { category, subcategory: pathSubcategory } = useParams();
+  const { category } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
   const subcategory = searchParams.get("subcategory");
+  const navigate = useNavigate();
   
   const [services, setServices] = useState([]);
   const [subcategories, setSubcategories] = useState(["all"]);
   const [loading, setLoading] = useState(true);
   const [activeSubcategory, setActiveSubcategory] = useState(subcategory || "all");
   const [error, setError] = useState(null);
-  const [categoryTitle, setCategoryTitle] = useState("");
 
+  // Determinar la categoría activa desde la URL
+  const currentCategory = category ? normalizeCategory(category) : null;
+  
   // Cargar servicios cuando cambia la categoría o subcategoría
-  useEffect(() => {
-    const loadServices = async () => {
-      setLoading(true);
-      setError(null);
+useEffect(() => {
+  const loadServices = async () => {
+    setLoading(true);
+    setError(null);
 
-      try {
-        let loadedServices = [];
+    try {
+      let loadedServices = [];
 
-        // Función auxiliar para cargar un JSON por nombre de archivo
-        const loadJsonByFilename = async (filename) => {
-          const path = `../../data/${filename}`;
-          
-          if (!servicesModules[path]) {
-            console.warn(`No se encontró: ${path}`);
-            return [];
-          }
+      const loadCategoryServices = async (normalized) => {
+        const path = `../../data/services-${normalized}.json`;
 
-          const module = await servicesModules[path]();
-          const categoryServices = Array.isArray(module.default.services)
-            ? module.default.services
-            : [];
-          
-          return categoryServices.map((s, idx) => ({ 
-            ...s, 
-            __uid: `${filename}-${s.id}-${idx}` 
-          }));
-        };
-
-        if (category) {
-          // Cargar UNA categoría específica
-          const filename = FILE_MAP[category];
-          
-          if (!filename) {
-            setError(`Categoría "${category}" no encontrada`);
-            setLoading(false);
-            return;
-          }
-
-          loadedServices = await loadJsonByFilename(filename);
-          setCategoryTitle(CATEGORIES_DISPLAY[category] || category);
-        } else {
-          // Cargar TODAS las categorías
-          for (const [slug, filename] of Object.entries(FILE_MAP)) {
-            try {
-              const categoryServices = await loadJsonByFilename(filename);
-              loadedServices.push(...categoryServices);
-            } catch (e) {
-              console.warn(`No se pudo cargar ${filename}:`, e);
-            }
-          }
-
-          setCategoryTitle("Todos los Servicios");
+        if (!servicesModules[path]) {
+          throw new Error("Archivo no encontrado");
         }
 
-        // Extraer subcategorías únicas
-        const uniqueSubcategories = [
-          "all",
-          ...new Set(loadedServices.map(s => s.subcategory).filter(Boolean)),
-        ];
+        const module = await servicesModules[path]();
+        const original = Array.isArray(module.default.services)
+          ? module.default.services
+          : [];
+        // Add a unique id per-service to avoid duplicate React keys across files
+        return original.map(s => ({ ...s, __uid: `${normalized}-${s.id}` }));
+      };
 
-        // Resolver subcategoría desde URL (tolerante a variaciones)
-        const incomingSub = subcategory || pathSubcategory || null;
-        let resolvedSubcategory = incomingSub;
-
-        if (incomingSub) {
-          const normParam = normalizeString(incomingSub);
-          const found = uniqueSubcategories.find((u) => normalizeString(u) === normParam);
-          
-          if (found) {
-            resolvedSubcategory = found;
-          } else {
-            const partial = uniqueSubcategories.find((u) => 
-              normalizeString(u).startsWith(normParam)
-            );
-            if (partial) resolvedSubcategory = partial;
+      if (category) {
+        // Cargar una categoría específica
+        const normalizedCategory = normalizeCategory(category);
+        loadedServices = await loadCategoryServices(normalizedCategory);
+      } else {
+        // Cargar todas las categorías
+        for (const cat of CATEGORIES) {
+          const normalizedCat = normalizeCategory(cat);
+          try {
+            const services = await loadCategoryServices(normalizedCat);
+            loadedServices.push(...services);
+          } catch (e) {
+            console.warn(`No se pudo cargar ${normalizedCat}`);
           }
         }
-
-        setServices(loadedServices);
-        setSubcategories(uniqueSubcategories);
-
-        // Actualizar subcategoría activa
-        if (resolvedSubcategory && !uniqueSubcategories.includes(resolvedSubcategory)) {
-          setActiveSubcategory("all");
-          setSearchParams({});
-        } else {
-          setActiveSubcategory(resolvedSubcategory || "all");
-          
-          // Sincronizar URL con subcategoría resuelta
-          if (resolvedSubcategory && resolvedSubcategory !== subcategory) {
-            setSearchParams({ subcategory: resolvedSubcategory });
-          }
-        }
-
-      } catch (err) {
-        console.error('Error cargando servicios:', err);
-        setError("Error al cargar los servicios.");
-      } finally {
-        setLoading(false);
       }
-    };
 
-    loadServices();
-  }, [category, subcategory, pathSubcategory, setSearchParams]);
+      const uniqueSubcategories = [
+        "all",
+        ...new Set(loadedServices.map(s => s.subcategory).filter(Boolean)),
+      ];
+
+      // Helper to normalize strings for tolerant matching
+      const normalizeString = (str) =>
+        String(str || "")
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/\p{Diacritic}/gu, "")
+          .replace(/[^a-z0-9]/g, "")
+          .replace(/s$/i, "");
+
+      // If a subcategory query param exists, try to find the best match
+      let resolvedSubcategory = subcategory;
+      if (subcategory) {
+        const normParam = normalizeString(subcategory);
+        const found = uniqueSubcategories.find((u) => normalizeString(u) === normParam);
+        if (found) {
+          resolvedSubcategory = found;
+        } else {
+          // try partial match (startsWith) as fallback
+          const partial = uniqueSubcategories.find((u) => normalizeString(u).startsWith(normParam));
+          if (partial) resolvedSubcategory = partial;
+        }
+      }
+
+      setServices(loadedServices);
+      setSubcategories(uniqueSubcategories);
+
+      if (subcategory && !uniqueSubcategories.includes(resolvedSubcategory)) {
+        setActiveSubcategory("all");
+        setSearchParams({});
+      } else {
+        setActiveSubcategory(resolvedSubcategory || "all");
+        // keep URL in sync with the resolved (actual) subcategory name
+        if (resolvedSubcategory && resolvedSubcategory !== subcategory) {
+          setSearchParams({ subcategory: resolvedSubcategory });
+        }
+      }
+    } catch (err) {
+      console.error(err);
+      setError("Error al cargar los servicios.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  loadServices();
+}, [category, subcategory, setSearchParams]);
 
   // Cambiar subcategoría
   const handleSubcategoryChange = (newSubcategory) => {
@@ -162,6 +137,11 @@ export default function ServicesPage() {
     } else {
       setSearchParams({ subcategory: newSubcategory });
     }
+  };
+  
+  // Cambiar categoría
+  const handleCategoryChange = (newCategory) => {
+    navigate(`/services/${newCategory}`);
   };
   
   // Filtrar servicios por subcategoría
@@ -205,18 +185,20 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* Título de categoría actual */}
-      <div className="bg-white border-b shadow-sm">
-        <div className="container mx-auto px-4">
-          <div className="py-4">
-            <h2 className="text-2xl font-bold text-[#4A235A]">
-              {categoryTitle}
-            </h2>
-          </div>
-        </div>
-      </div>
+{/* Título de categoría actual */}
+<div className="bg-white border-b shadow-sm">
+  <div className="container mx-auto px-4">
+    <div className="py-4">
+      <h2 className="text-2xl font-bold text-[#4A235A]">
+        {category 
+          ? CATEGORIES.find(cat => normalizeCategory(cat) === category) || category.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase())
+          : "Todos los Servicios"}
+      </h2>
+    </div>
+  </div>
+</div>
 
-      {/* Filtro de subcategorías */}
+      {/* Filtro de subcategorías - Solo mostrar si hay subcategorías disponibles */}
       {subcategories.length > 1 && (
         <div className="container mx-auto px-4 py-4">
           <h3 className="text-lg font-medium text-gray-700 mb-2">Filtrar por subcategoría:</h3>
@@ -243,7 +225,7 @@ export default function ServicesPage() {
         {filteredServices.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredServices.map((service) => (
-              <ServiceCard key={service.__uid} service={service} />
+              <ServiceCard key={service.id} service={service} />
             ))}
           </div>
         ) : (

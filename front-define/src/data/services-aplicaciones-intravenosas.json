@@ -3,40 +3,40 @@
   "services": [
       {
         "id": 1,
-        "subcategory": "Pelling",
-        "title": "Pelling Quimico Antiacne",
+        "subcategory": "peeling",
+        "title": "peeling Quimico Antiacne",
         "description": "Tratamiento de cejas que incluye diseño, y planchado de cejas.",
         "images": ["/flores-landing.jpg"], 
         "price": 180
       },
       {
         "id": 2,
-        "subcategory": "Pelling",
-        "title": "Pelling Quimico Despigmentante",
+        "subcategory": "peeling",
+        "title": "peeling Quimico Despigmentante",
         "description": "Tratamiento hidratante que restaura la humedad de la piel y mejora su elasticidad.",
         "images": ["/flores-landing.jpg"], 
         "price": 180
       },
       {
         "id": 3,
-        "subcategory": "Pelling",
-        "title": "Pelling Quimico Roseasea",
+        "subcategory": "peeling",
+        "title": "peeling Quimico Roseasea",
         "description": "Masaje relajación.",
         "images": ["/flores-landing.jpg"], 
         "price": 180
       },
       {
         "id": 4,
-        "subcategory": "Pelling",
-        "title": "Pelling Quimico Antienvegecimiento",
+        "subcategory": "peeling",
+        "title": "peeling Quimico Antienvegecimiento",
         "description": "Masaje",
         "images": ["/placeholder.svg"],
         "price": 180
       },
       {
         "id": 4,
-        "subcategory": "Pelling",
-        "title": "Pelling Quimico Antienvegecimiento",
+        "subcategory": "peeling",
+        "title": "peeling Quimico Antienvegecimiento",
         "description": "Masaje",
         "images": ["/placeholder.svg"],
         "price": 180

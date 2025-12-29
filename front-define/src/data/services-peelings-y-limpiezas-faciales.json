@@ -4,40 +4,40 @@
   "services": [
       {
         "id": 1,
-        "subcategory": "Pelling",
-        "title": "Pelling Quimico Antiacne",
+        "subcategory": "Peeling",
+        "title": "Peeling Quimico Antiacne",
         "description": "Tratamiento de cejas que incluye diseño, y planchado de cejas.",
         "images": ["/src/assets/images/services/faciales/peeling1-1.jpg","/src/assets/images/services/faciales/facial1-1.jpg"], 
         "price": 180
       },
       {
         "id": 2,
-        "subcategory": "Pelling",
-        "title": "Pelling Quimico Despigmentante",
+        "subcategory": "Peeling",
+        "title": "Peeling Quimico Despigmentante",
         "description": "Tratamiento hidratante que restaura la humedad de la piel y mejora su elasticidad.",
         "images": ["/src/assets/images/services/faciales/peeling1-1.jpg","/src/assets/images/services/faciales/facial1-1.jpg"], 
         "price": 180
       },
       {
         "id": 3,
-        "subcategory": "Pelling",
-        "title": "Pelling Quimico Roseasea",
+        "subcategory": "Peeling",
+        "title": "Peeling Quimico Roseasea",
         "description": "Masaje relajación.",
         "images": ["/src/assets/images/services/faciales/peeling1-1.jpg","/src/assets/images/services/faciales/facial1-1.jpg"], 
         "price": 180
       },
       {
         "id": 4,
-        "subcategory": "Pelling",
-        "title": "Pelling Quimico Antienvegecimiento",
+        "subcategory": "Peeling",
+        "title": "Peeling Quimico Antienvegecimiento",
         "description": "Masaje",
         "images": ["/src/assets/images/services/faciales/peeling1-1.jpg","/src/assets/images/services/faciales/facial1-1.jpg"], 
         "price": 180
       },
       {
         "id": 5,
-        "subcategory": "Pelling",
-        "title": "Pelling Quimico Antienvegecimiento",
+        "subcategory": "Peeling",
+        "title": "Peeling Quimico Antienvegecimiento",
         "description": "Masaje",
         "images": ["/flores-landing.jpg"], 
         "price": 180
