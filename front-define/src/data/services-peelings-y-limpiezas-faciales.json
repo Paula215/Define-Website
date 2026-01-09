@@ -2,70 +2,61 @@
   "category": "peelings-y-limpiezas-faciales",
   "displayName": "Peelings y Limpiezas Faciales",
   "services": [
-      {
-        "id": 1,
-        "subcategory": "Peeling",
-        "title": "Peeling Quimico Antiacne",
-        "description": "Tratamiento de cejas que incluye diseño, y planchado de cejas.",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/peeling1-1_ptir7i.jpg"]
-       
-      },
-      {
-        "id": 2,
-        "subcategory": "Peeling",
-        "title": "Peeling Quimico Despigmentante",
-        "description": "Tratamiento hidratante que restaura la humedad de la piel y mejora su elasticidad.",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586541/peeling_despigmentante_l3qado.jpg"]
-       
-      },
-      {
-        "id": 3,
-        "subcategory": "Peeling",
-        "title": "Peeling Quimico Roseasea",
-        "description": "Masaje relajación.",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586541/peeling_rosasea_yc7umg.jpg"]
-       
-      },
-      {
-        "id": 4,
-        "subcategory": "Peeling",
-        "title": "Peeling Quimico Antienvegecimiento",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586541/peeling_antienvegecimiento_wllhbc.jpg"]
-       
-      },
-      {
-        "id": 6,
-        "subcategory": "Facial",
-        "title": "Facial Punta diamante",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586541/facial1-1_c1xw2h.jpg"]
-       
-      },
-      {
-        "id": 7,
-        "subcategory": "Facial",
-        "title": "Facial Básico",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586541/facial2-1_srsynt.jpg"]
-       
-      },
-      {
-        "id": 8,
-        "subcategory": "Facial",
-        "title": "Facial Define",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586541/facial1-1_c1xw2h.jpg"]
-       
-      },
-      {
-        "id": 9,
-        "subcategory": "Facial",
-        "title": "Hidro Facial",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586541/facial2-1_srsynt.jpg"]
-       
-      }
-      
-    ]
-  }
+    {
+      "id": 1,
+      "subcategory": "Peeling",
+      "title": "Peeling Quimico Antiacne",
+      "description": "Peeling químico que ayuda a controlar el acné, reducir imperfecciones y mejorar la textura.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/peeling1-1_ptir7i.jpg"]
+    },
+    {
+      "id": 2,
+      "subcategory": "Peeling",
+      "title": "Peeling Quimico Despigmentante",
+      "description": "Tratamiento que atenúa manchas, unifica el tono de la piel y aporta mayor luminosidad.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586541/peeling_despigmentante_l3qado.jpg"]
+    },
+    {
+      "id": 3,
+      "subcategory": "Peeling",
+      "title": "Peeling Quimico Roseasea",
+      "description": "Peeling suave indicado para rosácea, que calma la piel y reduce enrojecimiento facial.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586541/peeling_rosasea_yc7umg.jpg"]
+    },
+    {
+      "id": 4,
+      "subcategory": "Peeling",
+      "title": "Peeling Quimico Antienvegecimiento",
+      "description": "Tratamiento antiedad que estimula la renovación celular y mejora líneas de expresión.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586541/peeling_antienvegecimiento_wllhbc.jpg"]
+    },
+    {
+      "id": 6,
+      "subcategory": "Facial",
+      "title": "Facial Punta diamante",
+      "description": "Exfoliación profunda con punta de diamante que renueva la piel y mejora su suavidad.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586541/facial1-1_c1xw2h.jpg"]
+    },
+    {
+      "id": 7,
+      "subcategory": "Facial",
+      "title": "Facial Básico",
+      "description": "Limpieza facial esencial que elimina impurezas y deja la piel fresca y equilibrada.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586541/facial2-1_srsynt.jpg"]
+    },
+    {
+      "id": 8,
+      "subcategory": "Facial",
+      "title": "Facial Define",
+      "description": "Tratamiento facial completo que hidrata, revitaliza y mejora la apariencia del rostro.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586541/facial1-1_c1xw2h.jpg"]
+    },
+    {
+      "id": 9,
+      "subcategory": "Facial",
+      "title": "Hidro Facial",
+      "description": "Limpieza facial profunda con hidratación intensiva que aporta luminosidad inmediata.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586541/facial2-1_srsynt.jpg"]
+    }
+  ]
+}

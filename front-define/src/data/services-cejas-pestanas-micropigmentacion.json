@@ -1,122 +1,117 @@
 {
   "category": "Cejas, Pestañas y Micropigmentación",
   "services": [
-      {
-        "id": 1,
-        "subcategory": "Micropigmentación",
-        "title": "Microblading",
-        "description": "Tratamiento de cejas que incluye diseño, y planchado de cejas.",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/micropigmentacion_u6shwa.jpg"]
-       
-      },
-      {
-        "id": 2,
-        "subcategory": "Micropigmentación",
-        "title": "Powder Brow",
-        "description": "Tratamiento hidratante que restaura la humedad de la piel y mejora su elasticidad.",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/micropigmentacion1-powder_tfyesg.jpg"]
-       
-      },
-      {
-        "id": 3,
-        "subcategory": "Micropigmentación",
-        "title": "Micropigmentación Tecnica Hibrida",
-        "description": "Masaje relajación.",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/micropigmentacion_hibrida_k3djcy.jpg"]
-       
-      },
-      {
-        "id": 4,
-        "subcategory": "Micropigmentación",
-        "title": "Hiperrealismo",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/hairstroke_jjsig2.jpg", "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/hairstroke2_atuodk.jpg"]
-       
-      },
-      {
-        "id": 4,
-        "subcategory": "Micropigmentación",
-        "title": "Delineado Labios",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586537/delineado_labios_jekhvx.jpg"]
-       
-      },
-      {
-        "id": 5,
-        "subcategory": "Micropigmentación",
-        "title": "Delineado Parpados",
-        "description": "Masaje",
-        "images": [
-          "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/micropigmentacion3-1_vpfa5q.jpg",
-          "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/micropigmentacion3-2-1_keih7o.png",
-          "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586541/micropigmentacion3-2-2_v2no63.png"
-        ]
-       
-      },
-      {
-        "id": 6,
-        "subcategory": "Micropigmentación",
-        "title": "Libs Full Color",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/micropigmentacion2-1_klsb2g.jpg", "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/micropigmentacion2-2_wqk0ff.jpg"]
-       
-      },
-      {
-        "id": 7,
-        "subcategory": "Micropigmentación",
-        "title": "Tricopigmentación",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/extension-pesta%C3%B1as_qqdhni.jpg"]
-       
-      },
-      {
-        "id": 8,
-        "subcategory": "Cejas",
-        "title": "Cejas Diseño con Hena",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/extension-pesta%C3%B1as_qqdhni.jpg"]
-       
-      },
-      {
-        "id": 9,
-        "subcategory": "Cejas",
-        "title": "Cejas planchado",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/planchado-cejas1-1_p9m5ye.jpg", "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/planchado-cejas1-2_rorl8u.jpg" ]
-       
-      },
-      {
-        "id": 10,
-        "subcategory": "Pestañas",
-        "title": "Pestañas 3D",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/extension-pesta%C3%B1as_qqdhni.jpg"]
-       
-      },
-
-      {
-        "id": 13,
-        "subcategory": "Pestañas",
-        "title": "Pestañas Lifting",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/rizado1-1_slvwqm.jpg", "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/rizado1-2_an1aet.jpg"]
-       
-      },
-      {
-        "id": 14,
-        "subcategory": "Pestañas",
-        "title": "Pestañas Rizado + Tinturación",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/extension-pesta%C3%B1as_qqdhni.jpg"]
-       
-      },
-      {
-        "id": 15,
-        "subcategory": "Pestañas",
-        "title": "Pestañas Lifting Coreano",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/lifting-coreano1_ubefgw.jpg"]
-       
-      }
-    ]
-  }
+    {
+      "id": 1,
+      "subcategory": "Micropigmentación",
+      "title": "Microblading",
+      "description": "Técnica de micropigmentación que diseña cejas pelo a pelo para un resultado natural y definido.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/micropigmentacion_u6shwa.jpg"]
+    },
+    {
+      "id": 2,
+      "subcategory": "Micropigmentación",
+      "title": "Powder Brow",
+      "description": "Micropigmentación con efecto sombreado que aporta definición suave y un acabado tipo maquillaje.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/micropigmentacion1-powder_tfyesg.jpg"]
+    },
+    {
+      "id": 3,
+      "subcategory": "Micropigmentación",
+      "title": "Micropigmentación Tecnica Hibrida",
+      "description": "Combinación de microblading y powder brow para lograr cejas definidas con efecto natural.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/micropigmentacion_hibrida_k3djcy.jpg"]
+    },
+    {
+      "id": 4,
+      "subcategory": "Micropigmentación",
+      "title": "Hiperrealismo",
+      "description": "Técnica avanzada que simula el vello natural con alta precisión y resultados muy realistas.",
+      "images": [
+        "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/hairstroke_jjsig2.jpg",
+        "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/hairstroke2_atuodk.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "subcategory": "Micropigmentación",
+      "title": "Delineado Labios",
+      "description": "Micropigmentación que define el contorno de los labios, realzando su forma y color natural.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586537/delineado_labios_jekhvx.jpg"]
+    },
+    {
+      "id": 6,
+      "subcategory": "Micropigmentación",
+      "title": "Delineado Parpados",
+      "description": "Delineado semipermanente en párpados que intensifica la mirada con un acabado duradero.",
+      "images": [
+        "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767915705/delineado_3616ce.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "subcategory": "Micropigmentación",
+      "title": "Libs Full Color",
+      "description": "Pigmentación completa de labios que aporta color uniforme, definición y un aspecto saludable.",
+      "images": [
+        "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/micropigmentacion2-1_klsb2g.jpg",
+        "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/micropigmentacion2-2_wqk0ff.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "subcategory": "Micropigmentación",
+      "title": "Tricopigmentación",
+      "description": "Técnica que simula folículos capilares para mejorar la apariencia del cuero cabelludo.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/extension-pesta%C3%B1as_qqdhni.jpg"]
+    },
+    {
+      "id": 9,
+      "subcategory": "Cejas",
+      "title": "Cejas Diseño con Hena",
+      "description": "Diseño de cejas con henna que define, rellena y realza la forma de manera temporal.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/extension-pesta%C3%B1as_qqdhni.jpg"]
+    },
+    {
+      "id": 10,
+      "subcategory": "Cejas",
+      "title": "Cejas planchado",
+      "description": "Tratamiento que alinea y fija el vello de las cejas para un efecto ordenado y natural.",
+      "images": [
+        "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/planchado-cejas1-1_p9m5ye.jpg",
+        "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/planchado-cejas1-2_rorl8u.jpg"
+      ]
+    },
+    {
+      "id": 11,
+      "subcategory": "Pestañas",
+      "title": "Pestañas 3D",
+      "description": "Extensión de pestañas 3D que aporta mayor volumen y profundidad a la mirada.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/extension-pesta%C3%B1as_qqdhni.jpg"]
+    },
+    {
+      "id": 12,
+      "subcategory": "Pestañas",
+      "title": "Pestañas Lifting",
+      "description": "Lifting de pestañas que eleva y curva desde la raíz, logrando un efecto natural.",
+      "images": [
+        "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/rizado1-1_slvwqm.jpg",
+        "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/rizado1-2_an1aet.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "subcategory": "Pestañas",
+      "title": "Pestañas Rizado + Tinturación",
+      "description": "Tratamiento que riza y tiñe las pestañas para una mirada intensa sin maquillaje.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/extension-pesta%C3%B1as_qqdhni.jpg"]
+    },
+    {
+      "id": 14,
+      "subcategory": "Pestañas",
+      "title": "Pestañas Lifting Coreano",
+      "description": "Lifting coreano que fortalece y curva las pestañas, aportando un acabado más duradero.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/lifting-coreano1_ubefgw.jpg"]
+    }
+  ]
+}

@@ -1,53 +1,47 @@
 {
   "category": "Depilacion",
   "services": [
-      {
-        "id": 1,
-        "subcategory": "Depilación Corporal",
-        "title": "Depilación Piernas",
-        "description": "Tratamiento de cejas que incluye diseño, y planchado de cejas.",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion1_ztixqd.jpg"]
-       
-      },
-      {
-        "id": 2,
-        "subcategory": "Depilación Corporal",
-        "title": "Depilación Axila",
-        "description": "Tratamiento hidratante que restaura la humedad de la piel y mejora su elasticidad.",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion1_ztixqd.jpg"]
-       
-      },
-      {
-        "id": 3,
-        "subcategory": "Depilación Corporal",
-        "title": "Depilación Brazos",
-        "description": "Masaje relajación.",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion1_ztixqd.jpg"]
-       
-      },
-      {
-        "id": 4,
-        "subcategory": "Depilación Facial",
-        "title": "Depilación Facial",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion-facial1-1_cczm6s.jpg"]
-       
-      },
-      {
-        "id": 5,
-        "subcategory": "Depilación Facial",
-        "title": "Depilación Cejas",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion1_ztixqd.jpg"]
-       
-      },
-      {
-        "id": 6,
-        "subcategory": "Depilación Facial",
-        "title": "Depilación Bozo",
-        "description": "Masaje",
-        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion1_ztixqd.jpg"]
-       
-      }
-    ]
-  }
+    {
+      "id": 1,
+      "subcategory": "Depilación Corporal",
+      "title": "Depilación Piernas",
+      "description": "Eliminación del vello en piernas completas o medias piernas, dejando la piel suave, limpia y uniforme.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion1_ztixqd.jpg"]
+    },
+    {
+      "id": 2,
+      "subcategory": "Depilación Corporal",
+      "title": "Depilación Axila",
+      "description": "Depilación de axilas que ayuda a reducir el vello, mejorar la higiene y mantener la piel lisa.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion1_ztixqd.jpg"]
+    },
+    {
+      "id": 3,
+      "subcategory": "Depilación Corporal",
+      "title": "Depilación Brazos",
+      "description": "Tratamiento de depilación en brazos que aporta una apariencia prolija y una textura suave.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion1_ztixqd.jpg"]
+    },
+    {
+      "id": 4,
+      "subcategory": "Depilación Facial",
+      "title": "Depilación Facial",
+      "description": "Eliminación del vello facial para lograr una piel más limpia, uniforme y libre de impurezas.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion-facial1-1_cczm6s.jpg"]
+    },
+    {
+      "id": 5,
+      "subcategory": "Depilación Facial",
+      "title": "Depilación Cejas",
+      "description": "Depilación de cejas que define y ordena la forma natural del rostro de manera precisa.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion1_ztixqd.jpg"]
+    },
+    {
+      "id": 6,
+      "subcategory": "Depilación Facial",
+      "title": "Depilación Bozo",
+      "description": "Depilación del bozo que mejora la apariencia del rostro y deja la piel suave y uniforme.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion1_ztixqd.jpg"]
+    }
+  ]
+}

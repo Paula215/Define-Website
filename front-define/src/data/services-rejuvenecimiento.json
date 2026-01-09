@@ -4,55 +4,55 @@
     {
       "id": 1,
       "title": "Botox Baby",
-      "description": "Aplicación de toxina botulínica para suavizar líneas de expresión de forma sutil y natural.",
+      "description": "Aplicación de toxina botulínica en microdosis para suavizar líneas de expresión de forma natural.",
       "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/botox_hzqny8.png"]
     },
     {
       "id": 2,
       "title": "Botox por Zona",
-      "description": "Tratamiento focalizado con botox para reducir arrugas en áreas específicas del rostro.",
+      "description": "Tratamiento localizado con botox que reduce arrugas en zonas específicas manteniendo la expresión.",
       "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/botox_hzqny8.png"]
     },
     {
       "id": 3,
       "title": "Botox Pack Completo Hombre",
-      "description": "Protocolo integral de botox adaptado a la anatomía facial masculina.",
+      "description": "Protocolo integral de botox diseñado según la anatomía masculina para un resultado equilibrado.",
       "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/botox_hzqny8.png"]
     },
     {
       "id": 4,
       "title": "Botox Pack Completo Mujer",
-      "description": "Tratamiento completo de botox diseñado para realzar la armonía facial femenina.",
+      "description": "Tratamiento completo de botox que suaviza arrugas y realza la armonía del rostro femenino.",
       "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/botox_hzqny8.png"]
     },
     {
       "id": 5,
       "title": "Plasma Rico en Plaquetas",
-      "description": "Estimulación celular mediante plasma autólogo para mejorar textura y luminosidad de la piel.",
+      "description": "Procedimiento regenerativo con plasma autólogo que mejora textura, luminosidad y firmeza cutánea.",
       "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/plasma_oel5fs.png"]
     },
     {
       "id": 6,
       "title": "Plasma Gel",
-      "description": "Procedimiento regenerativo que utiliza plasma gelificado para restaurar volumen y firmeza.",
+      "description": "Técnica avanzada que utiliza plasma gelificado para restaurar volumen y estimular colágeno.",
       "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/plasma_oel5fs.png"]
     },
     {
       "id": 7,
       "title": "Ácido Hialurónico",
-      "description": "Relleno dérmico para hidratación profunda, definición y restauración de volumen facial.",
+      "description": "Relleno dérmico que hidrata en profundidad, define contornos y recupera volumen facial.",
       "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/plasma_oel5fs.png"]
     },
     {
       "id": 8,
       "title": "Ezperma de salmon",
-      "description": "Relleno dérmico para hidratación profunda, definición y restauración de volumen facial.",
+      "description": "Tratamiento bioestimulador con PDRN que favorece la regeneración celular y rejuvenece la piel.",
       "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/pdrn_xdfvrp.png"]
     },
     {
       "id": 9,
       "title": "Enzimas",
-      "description": "Tratamiento enzimático para reducción de grasa localizada y mejora del contorno facial o corporal.",
+      "description": "Tratamiento enzimático que ayuda a reducir grasa localizada y mejorar el contorno facial o corporal.",
       "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/enzimas_th4ydw.png"]
     }
   ]
