@@ -1,45 +1,29 @@
 {
-  "category": "Tratamientos Reductores y Estéticos",
+  "category": "Tratamientos Corporales",
   "services": [
-      {
-        "id": 1,
-        "subcategory": "Tratamientos Reductores",
-        "title": "Tratamientos Reductores",
-        "description": "Tratamiento de cejas que incluye diseño, y planchado de cejas.",
-        "images": ["/placeholder.svg"], 
-        "price": 180
-      },
-      {
-        "id": 2,
-        "subcategory": "Tratamientos Reductores",
-        "title": "Tratamientos Reductores",
-        "description": "Tratamiento hidratante que restaura la humedad de la piel y mejora su elasticidad.",
-        "images": ["/placeholder.svg"],
-        "price": 180
-      },
-      {
-        "id": 3,
-        "subcategory": "Tratamientos Reductores",
-        "title": "Tratamientos Reductores",
-        "description": "Masaje relajación.",
-        "images": ["/placeholder.svg"],
-        "price": 180
-      },
-      {
-        "id": 4,
-        "subcategory": "Tratamientos Esteticos",
-        "title": "Tratamientos Esteticos",
-        "description": "Masaje",
-        "images": ["/placeholder.svg"],
-        "price": 180
-      },
-      {
-        "id": 4,
-        "subcategory": "Tratamientos Esteticos",
-        "title": "Tratamientos Esteticos",
-        "description": "Masaje",
-        "images": ["/placeholder.svg"],
-        "price": 180
-      }
-    ]
-  }
+    {
+      "id": 1,
+      "title": "Mesoterapia",
+      "description": "Tratamiento corporal que aplica microinyecciones para reducir grasa localizada y mejorar la textura de la piel.",
+      "images": ["/src/assets/images/services/reductores/mesoterapia.png"]
+    },
+    {
+      "id": 2,
+      "title": "Carboxiterapia",
+      "description": "Procedimiento que utiliza CO₂ medicinal para mejorar la circulación, reducir celulitis y reafirmar la piel.",
+      "images": ["/src/assets/images/services/reductores/mesoterapia.png"]
+    },
+    {
+      "id": 3,
+      "title": "Tratamientos Reafirmantes",
+      "description": "Protocolos corporales diseñados para mejorar la firmeza y elasticidad de la piel.",
+      "images": ["/src/assets/images/services/reductores/mesoterapia.png"]
+    },
+    {
+      "id": 4,
+      "title": "Bronceado",
+      "description": "Tratamiento estético para lograr un tono de piel uniforme y natural sin exposición prolongada al sol.",
+      "images": ["/src/assets/images/services/reductores/bronceado.png"]
+    }
+  ]
+}

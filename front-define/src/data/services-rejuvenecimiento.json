@@ -1,45 +1,59 @@
 {
   "category": "Rejuvenecimiento",
   "services": [
-      {
-        "id": 1,
-        "subcategory": "Rejuvenecimiento",
-        "title": "Rejuvenecimiento",
-        "description": "Tratamiento de cejas que incluye diseño, y planchado de cejas.",
-        "images": ["/placeholder.svg"], 
-        "price": 180
-      },
-      {
-        "id": 2,
-        "subcategory": "Rejuvenecimiento",
-        "title": "Rejuvenecimiento",
-        "description": "Tratamiento hidratante que restaura la humedad de la piel y mejora su elasticidad.",
-        "images": ["/placeholder.svg"],
-        "price": 180
-      },
-      {
-        "id": 3,
-        "subcategory": "Rejuvenecimiento",
-        "title": "peeling Quimico Roseasea",
-        "description": "Masaje relajación.",
-        "images": ["/placeholder.svg"],
-        "price": 180
-      },
-      {
-        "id": 4,
-        "subcategory": "Rejuvenecimiento",
-        "title": "Rejuvenecimiento",
-        "description": "Masaje",
-        "images": ["/placeholder.svg"],
-        "price": 180
-      },
-      {
-        "id": 5,
-        "subcategory": "Rejuvenecimiento",
-        "title": "Rejuvenecimiento",
-        "description": "Masaje",
-        "images": ["/placeholder.svg"],
-        "price": 180
-      }
-    ]
-  }
+    {
+      "id": 1,
+      "title": "Botox Baby",
+      "description": "Aplicación de toxina botulínica para suavizar líneas de expresión de forma sutil y natural.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/botox_hzqny8.png"]
+    },
+    {
+      "id": 2,
+      "title": "Botox por Zona",
+      "description": "Tratamiento focalizado con botox para reducir arrugas en áreas específicas del rostro.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/botox_hzqny8.png"]
+    },
+    {
+      "id": 3,
+      "title": "Botox Pack Completo Hombre",
+      "description": "Protocolo integral de botox adaptado a la anatomía facial masculina.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/botox_hzqny8.png"]
+    },
+    {
+      "id": 4,
+      "title": "Botox Pack Completo Mujer",
+      "description": "Tratamiento completo de botox diseñado para realzar la armonía facial femenina.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/botox_hzqny8.png"]
+    },
+    {
+      "id": 5,
+      "title": "Plasma Rico en Plaquetas",
+      "description": "Estimulación celular mediante plasma autólogo para mejorar textura y luminosidad de la piel.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/plasma_oel5fs.png"]
+    },
+    {
+      "id": 6,
+      "title": "Plasma Gel",
+      "description": "Procedimiento regenerativo que utiliza plasma gelificado para restaurar volumen y firmeza.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/plasma_oel5fs.png"]
+    },
+    {
+      "id": 7,
+      "title": "Ácido Hialurónico",
+      "description": "Relleno dérmico para hidratación profunda, definición y restauración de volumen facial.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/plasma_oel5fs.png"]
+    },
+    {
+      "id": 8,
+      "title": "Ezperma de salmon",
+      "description": "Relleno dérmico para hidratación profunda, definición y restauración de volumen facial.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/pdrn_xdfvrp.png"]
+    },
+    {
+      "id": 9,
+      "title": "Enzimas",
+      "description": "Tratamiento enzimático para reducción de grasa localizada y mejora del contorno facial o corporal.",
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/enzimas_th4ydw.png"]
+    }
+  ]
+}

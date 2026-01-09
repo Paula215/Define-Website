@@ -6,48 +6,48 @@
         "subcategory": "Depilación Corporal",
         "title": "Depilación Piernas",
         "description": "Tratamiento de cejas que incluye diseño, y planchado de cejas.",
-        "images": ["/src/assets/images/services/depilacion/depilacion1.jpg"], 
-        "price": 80
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion1_ztixqd.jpg"]
+       
       },
       {
         "id": 2,
         "subcategory": "Depilación Corporal",
         "title": "Depilación Axila",
         "description": "Tratamiento hidratante que restaura la humedad de la piel y mejora su elasticidad.",
-        "images": ["/src/assets/images/services/depilacion/depilacion1.jpg"], 
-        "price": 25
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion1_ztixqd.jpg"]
+       
       },
       {
         "id": 3,
         "subcategory": "Depilación Corporal",
         "title": "Depilación Brazos",
         "description": "Masaje relajación.",
-        "images": ["/src/assets/images/services/depilacion/depilacion1.jpg"], 
-        "price": 60
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion1_ztixqd.jpg"]
+       
       },
       {
         "id": 4,
         "subcategory": "Depilación Facial",
         "title": "Depilación Facial",
         "description": "Masaje",
-        "images": ["/src/assets/images/services/depilacion/depilacion-facial1-1.jpg"], 
-        "price": 50
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion-facial1-1_cczm6s.jpg"]
+       
       },
       {
         "id": 5,
         "subcategory": "Depilación Facial",
         "title": "Depilación Cejas",
         "description": "Masaje",
-        "images": ["/src/assets/images/services/depilacion/depilacion1.jpg"], 
-        "price": 15
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion1_ztixqd.jpg"]
+       
       },
       {
         "id": 6,
         "subcategory": "Depilación Facial",
         "title": "Depilación Bozo",
         "description": "Masaje",
-        "images": ["/src/assets/images/services/depilacion/depilacion1.jpg"], 
-        "price": 15
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/depilacion1_ztixqd.jpg"]
+       
       }
     ]
   }

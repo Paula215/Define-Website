@@ -74,7 +74,6 @@ export default function ServiceCard({ service }) {
             <span className="text-sm text-[#4A235A] font-medium">{service.subcategory}</span>
             <h3 className="text-xl font-bold mt-1">{service.title}</h3>
           </div>
-          <span className="text-sm text-gray-500">S/. {service.price}</span>
         </div>
 
         <p className="text-gray-600 mb-6">{service.description}</p>
@@ -98,7 +97,6 @@ ServiceCard.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     images: PropTypes.arrayOf(PropTypes.string).isRequired,
-    price: PropTypes.number.isRequired,
   }).isRequired,
 }
 

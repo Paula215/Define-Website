@@ -3,131 +3,127 @@
   "services": [
       {
         "id": 1,
-        "subcategory": "Micropigmentación Cejas",
+        "subcategory": "Micropigmentación",
         "title": "Microblading",
         "description": "Tratamiento de cejas que incluye diseño, y planchado de cejas.",
-        "images": ["/placeholder.svg"], 
-        "price": 350
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/micropigmentacion_u6shwa.jpg"]
+       
       },
       {
         "id": 2,
-        "subcategory": "Micropigmentación Cejas",
+        "subcategory": "Micropigmentación",
         "title": "Powder Brow",
         "description": "Tratamiento hidratante que restaura la humedad de la piel y mejora su elasticidad.",
-        "images": ["/src/assets/images/services/micropigmentacion/micropigmentacion1-powder.jpg"],
-        "price": 180
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/micropigmentacion1-powder_tfyesg.jpg"]
+       
       },
       {
         "id": 3,
         "subcategory": "Micropigmentación",
         "title": "Micropigmentación Tecnica Hibrida",
         "description": "Masaje relajación.",
-        "images": ["/placeholder.svg"],
-        "price": 180
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/micropigmentacion_hibrida_k3djcy.jpg"]
+       
       },
       {
         "id": 4,
-        "subcategory": "Micropigmentación Cejas",
+        "subcategory": "Micropigmentación",
         "title": "Hiperrealismo",
         "description": "Masaje",
-        "images": ["/placeholder.svg"],
-        "price": 0
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/hairstroke_jjsig2.jpg", "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/hairstroke2_atuodk.jpg"]
+       
       },
       {
         "id": 4,
         "subcategory": "Micropigmentación",
         "title": "Delineado Labios",
         "description": "Masaje",
-        "images": ["/placeholder.svg"],
-        "price": 180
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586537/delineado_labios_jekhvx.jpg"]
+       
       },
       {
         "id": 5,
         "subcategory": "Micropigmentación",
         "title": "Delineado Parpados",
         "description": "Masaje",
-        "images": ["/src/assets/images/services/micropigmentacion/micropigmentacion3-1.jpg","/src/assets/images/services/micropigmentacion/micropigmentacion3-2-1.jpg", "/src/assets/images/services/micropigmentacion/micropigmentacion3-2-2.jpg"],
-        "price": 120
+        "images": [
+          "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/micropigmentacion3-1_vpfa5q.jpg",
+          "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/micropigmentacion3-2-1_keih7o.png",
+          "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586541/micropigmentacion3-2-2_v2no63.png"
+        ]
+       
       },
       {
         "id": 6,
         "subcategory": "Micropigmentación",
         "title": "Libs Full Color",
         "description": "Masaje",
-        "images": ["/src/assets/images/services/micropigmentacion/micropigmentacion2-1.jpg", "/src/assets/images/services/micropigmentacion/micropigmentacion2-2.jpg"],
-        "price": 280
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/micropigmentacion2-1_klsb2g.jpg", "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/micropigmentacion2-2_wqk0ff.jpg"]
+       
       },
       {
         "id": 7,
         "subcategory": "Micropigmentación",
         "title": "Tricopigmentación",
         "description": "Masaje",
-        "images": ["/placeholder.svg"],
-        "price": 80
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/extension-pesta%C3%B1as_qqdhni.jpg"]
+       
       },
       {
         "id": 8,
         "subcategory": "Cejas",
         "title": "Cejas Diseño con Hena",
         "description": "Masaje",
-        "images": ["/placeholder.svg"],
-        "price": 150
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/extension-pesta%C3%B1as_qqdhni.jpg"]
+       
       },
       {
         "id": 9,
         "subcategory": "Cejas",
         "title": "Cejas planchado",
         "description": "Masaje",
-        "images": ["/src/assets/images/services/micropigmentacion/planchado-cejas1-1.jpg", "/src/assets/images/services/micropigmentacion/planchado-cejas1-2.jpg", "/src/assets/images/services/micropigmentacion/planchado-cejas1-3.jpg"],
-        "price": 80
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/planchado-cejas1-1_p9m5ye.jpg", "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586539/planchado-cejas1-2_rorl8u.jpg" ]
+       
       },
       {
         "id": 10,
         "subcategory": "Pestañas",
         "title": "Pestañas 3D",
         "description": "Masaje",
-        "images": ["/placeholder.svg"],
-        "price": 80
-      },
-      {
-        "id": 11,
-        "subcategory": "Pestañas",
-        "title": "Pestañas Tiras",
-        "description": "Masaje",
-        "images": ["/placeholder.svg"],
-        "price": 80
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/extension-pesta%C3%B1as_qqdhni.jpg"]
+       
       },
       {
         "id": 12,
         "subcategory": "Pestañas",
         "title": "Pestañas Postizas",
         "description": "Masaje",
-        "images": ["/placeholder.svg"],
-        "price": 80
+        "images": ["/placeholder.svg"]
+       
       },
       {
         "id": 13,
         "subcategory": "Pestañas",
         "title": "Pestañas Lifting",
         "description": "Masaje",
-        "images": ["/src/assets/images/services/micropigmentacion/rizado1-1.jpg", "/src/assets/images/services/micropigmentacion/rizado1-2.jpg"],
-        "price": 80
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/rizado1-1_slvwqm.jpg", "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/rizado1-2_an1aet.jpg"]
+       
       },
       {
         "id": 14,
         "subcategory": "Pestañas",
         "title": "Pestañas Rizado + Tinturación",
         "description": "Masaje",
-        "images": ["/placeholder.svg"],
-        "price": 80
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/extension-pesta%C3%B1as_qqdhni.jpg"]
+       
       },
       {
         "id": 15,
         "subcategory": "Pestañas",
         "title": "Pestañas Lifting Coreano",
         "description": "Masaje",
-        "images": ["/src/assets/images/services/micropigmentacion/lifting-coreano1.jpg"],
-        "price": 80
+        "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/lifting-coreano1_ubefgw.jpg"]
+       
       }
     ]
   }

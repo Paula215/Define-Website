@@ -18,7 +18,7 @@ export default function Services() {
       image: Eye,
       title: "Cejas, Pestañas y Micropigmentación",
       description: "Realza tu mirada con diseño de cejas, extensiones de pestañas y micropigmentación.",
-      link: "/services/cejas-pestanas-y-micropigmentacin"
+      link: "/services/cejas-pestanas-micropigmentacion"
     },
     {
       image: Micropigmantation,
@@ -36,13 +36,13 @@ export default function Services() {
       image: Body,
       title: "Tratamientos Reductores y esteticos",
       description: "Moldea tu cuerpo con mesoterapia, carboxiterapia y reafirmantes.",
-      link: "/services/tratamientos-reductores-y-esteticos"
+      link: "/services/tratamientos-reductores-esteticos"
     },
     {
       image: Body,
       title: "Aplicaciones Intravenosas",
       description: "Vitaminas y cócteles para mejorar energía, inmunidad y apariencia.",
-      link: "/services/aplicaciones-intravenosa"
+      link: "/services/aplicaciones-intravenosas"
     },
   ];
 
@@ -57,12 +57,12 @@ export default function Services() {
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
         {services.map((service, index) => (
           <Link to={service.link} key={index} className="mx-auto">
-            <Card className="bg-gris mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer">
-              <CardContent className="space-x-4 py-10 flex flex-col items-center">
-                <img 
-                  src={service.image || "/placeholder.svg"} 
-                  alt={service.title} 
-                  className="w-24 h-24 md:w-15 md:h-15 rounded-full"
+            <Card className="bg-gris mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer items-center">
+              <CardContent className="py-10 flex flex-col items-center space-y-4 h-full ">
+                <img
+                  className="w-24 h-24 rounded-full object-cover mx-auto"
+                  src={service.image || "/placeholder.svg"}
+                  alt={service.title}
                 />
                 <div className="text-center">
                   <h3 className="text-xl md:text-xl lg:text-2xl py-6 text-morado font-secondary font-medium">

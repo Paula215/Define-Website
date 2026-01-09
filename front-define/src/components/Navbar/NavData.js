@@ -3,7 +3,7 @@ export const normalizeSlug = (text) => {
   return text
     .toLowerCase()
     .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "") // Elimina acentos
+    .replace(/[\u0300-\u036f]/g, "")
     .replace(/ñ/g, 'n')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
@@ -51,20 +51,20 @@ export const NavLinks = [
       {
         id: "service-2", 
         title: "Peelings y Limpiezas Faciales", 
-        link: "/services/peelings-limpiezas-faciales",
+        link: "/services/peelings-y-limpiezas-faciales",
         slug: "peelings-limpiezas-faciales",
         submenu: [
           { 
             id: "subservice-1", 
-            title: "peeling", 
-            link: "/services/peelings-limpiezas-faciales/peelings",
-            slug: "peeling"
+            title: "Peeling", 
+            link: "/services/peelings-y-limpiezas-faciales/Peeling",
+            slug: "Peeling"
           },
           { 
             id: "subservice-2", 
             title: "Limpiezas Faciales", 
-            link: "/services/peelings-limpiezas-faciales/limpiezas",
-            slug: "limpiezas"
+            link: "/services/peelings-y-limpiezas-faciales/Facial",
+            slug: "Facial"
           },
         ],
       },
@@ -72,33 +72,7 @@ export const NavLinks = [
         id: "service-3", 
         title: "Rejuvenecimiento", 
         link: "/services/rejuvenecimiento",
-        slug: "rejuvenecimiento",
-        submenu: [
-          { 
-            id: "subservice-1", 
-            title: "Acido Hialuronico", 
-            link: "/services/rejuvenecimiento/acido-hialuronico",
-            slug: "acido-hialuronico"
-          },
-          { 
-            id: "subservice-2", 
-            title: "Botox", 
-            link: "/services/rejuvenecimiento/botox",
-            slug: "botox"
-          },
-          { 
-            id: "subservice-3", 
-            title: "Plasma rico en plaquetas", 
-            link: "/services/rejuvenecimiento/plasma",
-            slug: "plasma"
-          },
-          { 
-            id: "subservice-4", 
-            title: "Enzimas", 
-            link: "/services/rejuvenecimiento/enzimas",
-            slug: "enzimas"
-          },
-        ],
+        slug: "rejuvenecimiento"
       },
       { 
         id: "service-4", 
@@ -110,33 +84,7 @@ export const NavLinks = [
         id: "service-5", 
         title: "Tratamientos Reductores y Estéticos", 
         link: "/services/tratamientos-reductores-esteticos",
-        slug: "tratamientos-reductores-esteticos",
-        submenu: [
-          { 
-            id: "subservice-1", 
-            title: "Mesoterapia", 
-            link: "/services/tratamientos-reductores-esteticos/mesoterapia",
-            slug: "mesoterapia"
-          },
-          { 
-            id: "subservice-2", 
-            title: "Carboxiterapia", 
-            link: "/services/tratamientos-reductores-esteticos/carboxiterapia",
-            slug: "carboxiterapia"
-          },
-          { 
-            id: "subservice-3", 
-            title: "Reafirmantes", 
-            link: "/services/tratamientos-reductores-esteticos/reafirmantes",
-            slug: "reafirmantes"
-          },
-          { 
-            id: "subservice-4", 
-            title: "Bronceado", 
-            link: "/services/tratamientos-reductores-esteticos/bronceado",
-            slug: "bronceado"
-          },
-        ],
+        slug: "tratamientos-reductores-esteticos"
       },
       { 
         id: "service-6", 
@@ -148,38 +96,38 @@ export const NavLinks = [
   },
   { 
     id: 3, 
-    title: "Quien soy", 
+    title: "Nosotros", 
     link: "/quien-soy",
     slug: "quien-soy"
   },
-  {
-    id: 4,
-    title: "Cursos Define",
-    link: "/cursos",
-    slug: "cursos",
-    submenu: [
-      { 
-        id: "curso-1", 
-        title: "Básico: Micropigmentación cejas, labios, ojos", 
-        link: "/cursos/basico",
-        slug: "basico"
-      },
-      { 
-        id: "curso-2", 
-        title: "Intermedio: Micropigmentación labios", 
-        link: "/cursos/intermedio-labios",
-        slug: "intermedio-labios"
-      },
-      { 
-        id: "curso-3", 
-        title: "Intermedio: Micropigmentación ojos", 
-        link: "/cursos/intermedio-ojos",
-        slug: "intermedio-ojos"
-      },
-    ],
-  },
+  // {
+  //   id: 4,
+  //   title: "Cursos Define",
+  //   link: "/cursos",
+  //   slug: "cursos",
+  //   submenu: [
+  //     { 
+  //       id: "curso-1", 
+  //       title: "Básico: Micropigmentación cejas, labios, ojos", 
+  //       link: "/cursos/basico",
+  //       slug: "basico"
+  //     },
+  //     { 
+  //       id: "curso-2", 
+  //       title: "Intermedio: Micropigmentación labios", 
+  //       link: "/cursos/intermedio-labios",
+  //       slug: "intermedio-labios"
+  //     },
+  //     { 
+  //       id: "curso-3", 
+  //       title: "Intermedio: Micropigmentación ojos", 
+  //       link: "/cursos/intermedio-ojos",
+  //       slug: "intermedio-ojos"
+  //     },
+  //   ],
+  // },
   { 
-    id: 5, 
+    id: 4, 
     title: "Contacto", 
     link: "/contacto",
     slug: "contacto"
