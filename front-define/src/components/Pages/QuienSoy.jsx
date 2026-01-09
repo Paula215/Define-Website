@@ -1,6 +1,9 @@
 export default function QuienSoy() {
   return (
     <section className="bg-morado py-16">
+      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',border:0}}>
+        Quiénes somos - Define Belleza integral
+      </h1>
       <div className="container mx-auto px-4 space-y-12">
       {/* ===== CARD 1: VIDEO + TEXTO ===== */}
       <div className="bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 rounded-3xl shadow-xl overflow-hidden">
