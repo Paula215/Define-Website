@@ -11,13 +11,13 @@
       "id": 2,
       "title": "Aplicación de Cóctel de Vida Intravenosa",
       "description": "Combinación de vitaminas y minerales esenciales para revitalizar el organismo y combatir el cansancio.",
-      "images": ["/src/assets/images/services/inyectables/intravenosa.png"]
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/intravenosa_js8m1j.png"]
     },
     {
       "id": 3,
       "title": "Aplicación de Cóctel Antiage Intravenosa",
       "description": "Tratamiento intravenoso enfocado en la regeneración celular y el retraso de los signos del envejecimiento.",
-      "images": ["/src/assets/images/services/inyectables/intravenosa.png"]
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586542/intravenosa_js8m1j.png"]
     }
   ]
 }
