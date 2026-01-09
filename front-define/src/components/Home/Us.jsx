@@ -20,9 +20,24 @@ export default function NosotrosSection() {
             <h2 className="md:text-left text-center font-secondary text-xl md:text-2xl lg:text-2xl text-morado mb-3">
               Nosotros
             </h2>
-            <p className="md:text-left text-center text-plomo text-sm md:text-base lg:text-sm py-3 md:py-7 lg:py-8">
-              En nuestro estudio de belleza, con más de 10 años de experiencia, nos dedicamos a resaltar lo mejor de cada persona. Brindamos un servicio personalizado y de calidad, utilizando técnicas y productos de vanguardia para garantizar resultados excepcionales.
-            </p>
+<div className="md:text-left text-center text-plomo text-sm md:text-base lg:text-sm py-3 md:py-7 lg:py-8 space-y-4">
+  <p>
+    <strong>Define</strong> es un studio de belleza especializado en micropigmentación, con más de
+    <strong> 10 años de experiencia</strong> realzando la belleza natural de cada persona.
+  </p>
+
+  <p>
+    Ofrecemos un servicio personalizado, basado en un diagnóstico detallado y en el uso de
+    técnicas avanzadas y productos de alta calidad, para garantizar resultados armónicos,
+    seguros y duraderos.
+  </p>
+
+  <p>
+    Nuestro compromiso es que cada tratamiento refleje confianza, precisión y excelencia
+    en cada detalle.
+  </p>
+</div>
+
           </div>
         </div>
       </div>
