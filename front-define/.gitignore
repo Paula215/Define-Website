@@ -25,3 +25,4 @@ dist-ssr
 
 # ignorar assets service images
 /src/assets/images/services/**
+!/src/assets/images/quiensoy/**

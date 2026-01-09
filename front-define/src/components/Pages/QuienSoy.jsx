@@ -10,7 +10,7 @@ export default function QuienSoy() {
           <div className="md:w-2/5 shrink-0 flex items-center justify-center p-6 md:p-8">
             <div className="w-full max-w-sm">
               <video
-                src="/src/assets/images/quiensoy/queesdefine.mp4"
+                src="https://res.cloudinary.com/ddjy2qnvw/video/upload/v1767924214/queesdefine_ivbrih.mp4"
                 autoPlay
                 loop
                 muted
@@ -47,7 +47,7 @@ export default function QuienSoy() {
             <div className="relative">
               <div className="absolute inset-0 bg-morado/10 rounded-full blur-2xl"></div>
               <img
-                src="/src/assets/images/quiensoy/fundadora.jpg"
+                src="https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767924215/fundadora_tec6w2.jpg"
                 alt="Fundadora"
                 className="relative w-48 h-48 rounded-full object-cover shadow-xl border-4 border-white"
               />
