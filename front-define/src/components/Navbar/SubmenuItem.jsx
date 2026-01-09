@@ -13,7 +13,13 @@ const SubmenuItem = ({ item, activeSubDropdown, toggleSubDropdown }) => {
         to={linkTo}
         className="px-4 py-2 text-lg text-gray-700 hover:bg-lila hover:text-morado flex justify-between items-center"
         role="menuitem"
-        onClick={(e) => item.submenu && toggleSubDropdown(item.id, e)}
+        onClick={(e) => {
+          if (item.submenu) {
+            // On desktop we allow navigation to the parent group (show "all").
+            // Mobile-specific prevention is handled in MobileMenu.
+            toggleSubDropdown(item.id);
+          }
+        }}
       >
         {item.title}
         {item.submenu && <FaCaretRight className="ml-2" />}

@@ -26,7 +26,12 @@ const MobileMenu = ({ navLinks, activeDropdown, toggleDropdown, activeSubDropdow
                   <Link
                     to={subItem.submenu ? subItem.link : `${subItem.link}?subcategory=${encodeURIComponent(subItem.title)}`}
                     className="w-full flex items-center justify-between text-gray-600 hover:text-morado px-3 py-2 text-base"
-                    onClick={(e) => subItem.submenu && toggleSubDropdown(subItem.id, e)}
+                    onClick={(e) => {
+                      if (subItem.submenu) {
+                        e.preventDefault();
+                        toggleSubDropdown(subItem.id);
+                      }
+                    }}
                   >
                     {subItem.title}
                     {subItem.submenu && (

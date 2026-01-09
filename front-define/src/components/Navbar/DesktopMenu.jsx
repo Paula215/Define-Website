@@ -10,13 +10,14 @@ const DesktopMenu = ({ navLinks, activeDropdown, toggleDropdown, activeSubDropdo
       {navLinks.map((item) => (
         <div key={item.id} className="relative group">
           {item.submenu ? (
-            <button
+            <Link
+              to={item.link}
               className="flex items-center text-plomo hover:text-morado px-11 text-xl font-medium"
               onClick={() => toggleDropdown(item.id)}
             >
               {item.title}
               <FaCaretDown className="ml-1" />
-            </button>
+            </Link>
           ) : (
             <Link 
               to={item.link}

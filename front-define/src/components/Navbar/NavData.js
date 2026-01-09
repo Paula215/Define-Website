@@ -62,7 +62,7 @@ export const NavLinks = [
           },
           { 
             id: "subservice-2", 
-            title: "Limpiezas Faciales", 
+            title: "Facial", 
             link: "/services/peelings-y-limpiezas-faciales/Facial",
             slug: "Facial"
           },
@@ -78,7 +78,21 @@ export const NavLinks = [
         id: "service-4", 
         title: "Depilación", 
         link: "/services/depilacion",
-        slug: "depilacion"
+        slug: "depilacion",
+        submenu: [
+          { 
+            id: "subservice-1", 
+            title: "Depilación Corporal", 
+            link: "/services/depilacion/depilacion-laser",
+            slug: "depilacion-laser"
+          },
+          { 
+            id: "subservice-2", 
+            title: "Depilación Facial", 
+            link: "/services/depilacion/depilacion-electrica",
+            slug: "depilacion-electrica"
+          },
+        ],
       },
       {
         id: "service-5", 

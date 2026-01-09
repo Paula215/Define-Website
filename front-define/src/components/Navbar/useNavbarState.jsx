@@ -31,8 +31,7 @@ export const useNavbarState = () => {
     }
   };
 
-  const toggleSubDropdown = (id, e) => {
-    if (e) e.preventDefault();
+  const toggleSubDropdown = (id) => {
     setActiveSubDropdown(activeSubDropdown === id ? null : id);
   };
 
