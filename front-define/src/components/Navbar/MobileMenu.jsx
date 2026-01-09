@@ -7,18 +7,31 @@ const MobileMenu = ({ navLinks, activeDropdown, toggleDropdown, activeSubDropdow
     <div className="px-2 pt-2 pb-3 space-y-1">
       {navLinks.map((item) => (
         <div key={item.id}>
-          <Link
-            to={item.link}
-            className="w-full flex items-center justify-between text-gray-700 hover:text-morado px-3 py-2 text-base font-medium"
-            onClick={() => toggleDropdown(item.id)}
-          >
-            {item.title}
-            {item.submenu && (
+          {item.submenu && item.slug === 'servicios' ? (
+            <button
+              type="button"
+              className="w-full flex items-center justify-between text-gray-700 hover:text-morado px-3 py-2 text-base font-medium"
+              onClick={() => toggleDropdown(item.id)}
+            >
+              {item.title}
               <FaCaretDown
                 className={`ml-1 transform transition-transform ${activeDropdown === item.id ? "rotate-180" : ""}`}
               />
-            )}
-          </Link>
+            </button>
+          ) : (
+            <Link
+              to={item.link}
+              className="w-full flex items-center justify-between text-gray-700 hover:text-morado px-3 py-2 text-base font-medium"
+              onClick={() => toggleDropdown(item.id)}
+            >
+              {item.title}
+              {item.submenu && (
+                <FaCaretDown
+                  className={`ml-1 transform transition-transform ${activeDropdown === item.id ? "rotate-180" : ""}`}
+                />
+              )}
+            </Link>
+          )}
           {item.submenu && activeDropdown === item.id && (
             <div className="pl-4">
               {item.submenu.map((subItem) => (
