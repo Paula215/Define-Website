@@ -1,4 +1,4 @@
-import fondo from '../../assets/images/fondo-landing.png';
+import fondo from '../../assets/images/fondo-landing.webp';
 
 const Hero = () => {
   return (
