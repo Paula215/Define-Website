@@ -45,7 +45,7 @@
       "title": "Delineado Parpados",
       "description": "Delineado semipermanente en párpados que intensifica la mirada con un acabado duradero.",
       "images": [
-        "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767915705/delineado_3616ce.jpg"
+        "https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767915705/delineado_3616ce.jpg","https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767983639/micropigmentacion_delineado_q51wrc.jpg"
       ]
     },
     {
@@ -63,14 +63,14 @@
       "subcategory": "Micropigmentación",
       "title": "Tricopigmentación",
       "description": "Técnica que simula folículos capilares para mejorar la apariencia del cuero cabelludo.",
-      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/extension-pesta%C3%B1as_qqdhni.jpg"]
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767981649/tricopigmentacion_o3wbpa.png"]
     },
     {
       "id": 9,
       "subcategory": "Cejas",
       "title": "Cejas Diseño con Hena",
       "description": "Diseño de cejas con henna que define, rellena y realza la forma de manera temporal.",
-      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/extension-pesta%C3%B1as_qqdhni.jpg"]
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767981613/cejas-hena_hwbbk6.png"]
     },
     {
       "id": 10,
@@ -104,7 +104,7 @@
       "subcategory": "Pestañas",
       "title": "Pestañas Rizado + Tinturación",
       "description": "Tratamiento que riza y tiñe las pestañas para una mirada intensa sin maquillaje.",
-      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586538/extension-pesta%C3%B1as_qqdhni.jpg"]
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767981638/pestanias-tinturadas_vjuil5.png"]
     },
     {
       "id": 14,

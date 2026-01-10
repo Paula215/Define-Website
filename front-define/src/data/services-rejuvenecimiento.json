@@ -5,25 +5,25 @@
       "id": 1,
       "title": "Botox Baby",
       "description": "Aplicación de toxina botulínica en microdosis para suavizar líneas de expresión de forma natural.",
-      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/botox_hzqny8.png"]
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1768009117/botoxxzona_zttla4.jpg"]
     },
     {
       "id": 2,
       "title": "Botox por Zona",
       "description": "Tratamiento localizado con botox que reduce arrugas en zonas específicas manteniendo la expresión.",
-      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/botox_hzqny8.png"]
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1768009200/botox_soaqhz.jpg"]
     },
     {
       "id": 3,
       "title": "Botox Pack Completo Hombre",
       "description": "Protocolo integral de botox diseñado según la anatomía masculina para un resultado equilibrado.",
-      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/botox_hzqny8.png"]
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767983785/botox_hombre2_tpq9x1.jpg","https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767983782/botox_hombre1_klr4gq.jpg"]
     },
     {
       "id": 4,
       "title": "Botox Pack Completo Mujer",
       "description": "Tratamiento completo de botox que suaviza arrugas y realza la armonía del rostro femenino.",
-      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/botox_hzqny8.png"]
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767983670/botox_completo_yiuif6.png"]
     },
     {
       "id": 5,
@@ -41,7 +41,7 @@
       "id": 7,
       "title": "Ácido Hialurónico",
       "description": "Relleno dérmico que hidrata en profundidad, define contornos y recupera volumen facial.",
-      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767586540/plasma_oel5fs.png"]
+      "images": ["https://res.cloudinary.com/ddjy2qnvw/image/upload/v1768008866/acido-hialuronico1_ejpdyb.jpg","https://res.cloudinary.com/ddjy2qnvw/image/upload/v1768008866/acido-hialuronico2_nvyd6h.jpg"]
     },
     {
       "id": 8,
