@@ -2,15 +2,15 @@ import { Link } from 'react-router-dom';
 import { useTilt } from '../../hooks/useMotion';
 import skincare from '../../assets/images/icons/skincare.jpg';
 import lashing from '../../assets/images/icons/lashing.jpg';
-import plasma from '../../assets/images/services/rejuvenecimiento/plasma.png';
+import rejuvenecimiento from '../../assets/images/icons/rejuvencimiento.jpg';
 import depi from '../../assets/images/icons/depi.jpg';
 import body from '../../assets/images/icons/body.jpg';
-import intra from '../../assets/images/services/inyectables/intravenosa.png';
+import intra from '../../assets/images/icons/intravenosa.jpeg';
 
 const services = [
   { n: '01', img: skincare, t: 'Peelings y limpiezas faciales', d: 'Elimina impurezas, manchas y signos de envejecimiento para un rostro luminoso y uniforme.', to: '/services/peelings-y-limpiezas-faciales' },
   { n: '02', img: lashing, t: 'Cejas, pestañas y micropigmentación', d: 'Realza tu mirada con diseño de cejas, extensiones de pestañas y micropigmentación de acabado natural.', to: '/services/cejas-pestanas-micropigmentacion' },
-  { n: '03', img: plasma, t: 'Rejuvenecimiento', d: 'Tratamientos para reducir arrugas, mejorar la firmeza y revitalizar la piel del rostro y el cuello.', to: '/services/rejuvenecimiento' },
+  { n: '03', img: rejuvenecimiento, t: 'Rejuvenecimiento', d: 'Tratamientos para reducir arrugas, mejorar la firmeza y revitalizar la piel del rostro y el cuello.', to: '/services/rejuvenecimiento' },
   { n: '04', img: depi, t: 'Depilación', d: 'Piel suave y libre de vello con técnicas seguras, higiénicas y efectivas para cada zona.', to: '/services/depilacion' },
   { n: '05', img: body, t: 'Tratamientos reductores y estéticos', d: 'Moldea tu cuerpo con mesoterapia, carboxiterapia y protocolos reafirmantes personalizados.', to: '/services/tratamientos-reductores-esteticos' },
   { n: '06', img: intra, t: 'Aplicaciones intravenosas', d: 'Vitaminas y cócteles formulados para mejorar energía, inmunidad y la apariencia de la piel.', to: '/services/aplicaciones-intravenosas' },

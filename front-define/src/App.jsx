@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
@@ -10,18 +10,43 @@ import ServicesPage from './components/Pages/Service';
 
 // Al navegar: arriba de todo, o al ancla si la URL trae hash (#servicios, #contacto…).
 const ScrollToLocation = () => {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, key } = useLocation();
+  const prevPathname = useRef(null);
 
+  // `key` cambia en cada navegación, así que volver a pulsar el mismo
+  // enlace (p. ej. Contacto) vuelve a llevar a la sección.
   useEffect(() => {
-    if (hash) {
-      const target = document.querySelector(hash);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-        return;
-      }
+    const samePage = prevPathname.current === pathname;
+    prevPathname.current = pathname;
+
+    if (!hash) {
+      window.scrollTo(0, 0);
+      return;
     }
-    window.scrollTo(0, 0);
-  }, [pathname, hash]);
+
+    let tries = 0;
+    let timer;
+    let expectedY = null;
+
+    const goToAnchor = () => {
+      // Si el usuario ya movió la página, no le peleamos el scroll.
+      if (expectedY !== null && Math.abs(window.scrollY - expectedY) > 4) return;
+
+      const target = document.querySelector(hash);
+      if (!target) return;
+
+      // Dentro de la misma página el desplazamiento es suave. Al llegar desde
+      // otra ruta se salta directo y se reajusta unas veces, porque las
+      // imágenes cambian el alto del documento mientras cargan.
+      target.scrollIntoView({ behavior: samePage ? 'smooth' : 'auto' });
+      expectedY = window.scrollY;
+
+      if (!samePage && ++tries < 5) timer = setTimeout(goToAnchor, 300);
+    };
+
+    goToAnchor();
+    return () => clearTimeout(timer);
+  }, [pathname, hash, key]);
 
   return null;
 };

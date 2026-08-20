@@ -140,10 +140,10 @@ export const NavLinks = [
   //     },
   //   ],
   // },
-  { 
-    id: 4, 
-    title: "Contacto", 
-    link: "/contacto",
+  {
+    id: 4,
+    title: "Contacto",
+    link: "/#contacto",
     slug: "contacto"
   }
 ];

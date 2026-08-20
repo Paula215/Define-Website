@@ -1,5 +1,5 @@
 import studio from '../../assets/images/services/faciales/facial2-1.jpg';
-import cabina from '../../assets/images/services/faciales/facial1-1.jpg';
+import cabina from '../../assets/images/micropigmentacion2-1.jpeg';
 
 export default function Us() {
   return (
