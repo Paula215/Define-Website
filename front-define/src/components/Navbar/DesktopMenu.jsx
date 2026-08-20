@@ -1,60 +1,74 @@
-import { FaCaretDown } from "react-icons/fa";
-import { Link } from 'react-router-dom';
-import SubmenuItem from './SubmenuItem';
+import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import SubmenuItem from './SubmenuItem';
+import { CaretDown } from './Caret';
 
-const DesktopMenu = ({ navLinks, activeDropdown, toggleDropdown, activeSubDropdown, toggleSubDropdown }) => {
+const DesktopMenu = ({
+  navLinks,
+  activeDropdown = null,
+  toggleDropdown,
+  activeSubDropdown = null,
+  setActiveSubDropdown,
+  toggleSubDropdown
+}) => {
+  const { pathname } = useLocation();
+
+  const isCurrent = (link) => (link === '/' ? pathname === '/' : pathname.startsWith(link));
 
   return (
-    <div className="hidden lg:flex items-center space-x-8">
-      {navLinks.map((item) => (
-        <div key={item.id} className="relative group">
-          {item.submenu ? (
-            item.slug === 'servicios' ? (
-              <button
-                type="button"
-                className="flex items-center text-plomo hover:text-morado px-11 text-xl font-medium"
-                onClick={() => toggleDropdown(item.id)}
-              >
-                {item.title}
-                <FaCaretDown className="ml-1" />
-              </button>
-            ) : (
-              <Link
-                to={item.link}
-                className="flex items-center text-plomo hover:text-morado px-11 text-xl font-medium"
-                onClick={() => toggleDropdown(item.id)}
-              >
-                {item.title}
-                <FaCaretDown className="ml-1" />
-              </Link>
-            )
-          ) : (
-            <Link 
-              to={item.link}
-              className="flex items-center text-plomo hover:text-morado px-11 text-xl font-medium"
-            >
-              {item.title}
-            </Link>
-          )}
+    <nav className="desk" aria-label="Navegación principal">
+      {navLinks.map((item) => {
+        const open = activeDropdown === item.id;
+        const linkClass = `nav-link${isCurrent(item.link) ? ' current' : ''}`;
 
-          {item.submenu && activeDropdown === item.id && (
-            <div className="absolute left-0 mt-3 w-64 rounded-md shadow-lg bg-white ring-2 ring-black ring-opacity-5">
-              <div className="py-1" role="menu">
+        return (
+          <div key={item.id} className={`nav-item${open ? ' open' : ''}`}>
+            {item.submenu ? (
+              item.slug === 'servicios' ? (
+                <button
+                  type="button"
+                  className={linkClass}
+                  aria-expanded={open}
+                  aria-haspopup="true"
+                  onClick={() => toggleDropdown(item.id)}
+                >
+                  {item.title}
+                  <CaretDown className="nav-caret" />
+                </button>
+              ) : (
+                <Link
+                  to={item.link}
+                  className={linkClass}
+                  aria-expanded={open}
+                  onClick={() => toggleDropdown(item.id)}
+                >
+                  {item.title}
+                  <CaretDown className="nav-caret" />
+                </Link>
+              )
+            ) : (
+              <Link to={item.link} className={linkClass}>
+                {item.title}
+              </Link>
+            )}
+
+            {item.submenu && open && (
+              <div className="menu" role="menu">
                 {item.submenu.map((subItem) => (
                   <SubmenuItem
                     key={subItem.id}
                     item={subItem}
                     activeSubDropdown={activeSubDropdown}
+                    setActiveSubDropdown={setActiveSubDropdown}
                     toggleSubDropdown={toggleSubDropdown}
                   />
                 ))}
               </div>
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
+            )}
+          </div>
+        );
+      })}
+    </nav>
   );
 };
 
@@ -71,13 +85,8 @@ DesktopMenu.propTypes = {
   activeDropdown: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.oneOf([null])]),
   toggleDropdown: PropTypes.func.isRequired,
   activeSubDropdown: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.oneOf([null])]),
+  setActiveSubDropdown: PropTypes.func.isRequired,
   toggleSubDropdown: PropTypes.func.isRequired
-};
-
-// Valores por defecto
-DesktopMenu.defaultProps = {
-  activeDropdown: null,
-  activeSubDropdown: null
 };
 
 export default DesktopMenu;

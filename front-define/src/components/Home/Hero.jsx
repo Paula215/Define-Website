@@ -1,26 +1,39 @@
-import fondo from '../../assets/images/fondo-landing.webp';
+import { useRef } from 'react';
+import { useParallax } from '../../hooks/useMotion';
+import retrato from '../../assets/images/quiensoy/fundadora.jpg';
 
-const Hero = () => {
+export default function Hero() {
+  const img = useRef(null);
+  useParallax(img);
+
   return (
-    <div className="hero-container relative w-full h-[50vh] md:h-[80vh] lg:h-[85vh]">
-      {/* Imagen de fondo */}
-      <img
-        src={fondo || "/placeholder.svg"}
-        alt="fondo"
-        className="absolute inset-0 w-full h-full object-cover object-left-top md:object-center"
-        style={{
-          objectPosition: '20% center' // Ajusta este valor para centrar la cara en mobile 
-        }}
-      />
-
-      {/* Texto superpuesto */}
-      <div className="absolute top-16 right-6 md:right-12 md:inset-y-0 md:flex md:items-center md:justify-center lg:left-34 px-5">
-        <h2 className="font-secondary text-2xl md:text-4xl lg:text-4xl text-white font-bold drop-shadow-lg md:text-center max-w-[100px] md:max-w-3xl">
-          Define y realza tu belleza natural
-        </h2>
+    <section className="hero" id="top">
+      <div className="wrap hero-grid">
+        <div className="rv hero-copy" data-par="0.06">
+          <p className="eyebrow">Studio de belleza · San Borja, Lima</p>
+          <h1 className="d" style={{ marginTop: '1.5rem' }}>
+            Define y realza<br />tu <em style={{ fontStyle: 'italic', color: 'var(--plum)' }}>belleza</em> natural
+          </h1>
+          <p className="lede">
+            Micropigmentación y tratamientos estéticos con más de diez años de experiencia.
+            Diagnóstico personalizado, técnicas avanzadas y resultados que se ven naturales.
+          </p>
+          <div className="hero-actions">
+            <a href="#servicios" className="btn btn-solid">Ver servicios</a>
+            <a href="https://wa.me/51958336208" target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ color: 'var(--plum)' }}>Agendar cita</a>
+          </div>
+        </div>
+        <div className="rv" style={{ transitionDelay: '.12s' }}>
+          <div className="ph hero-media">
+            <div className="hero-frame">
+              <img ref={img} src={retrato} alt="Fundadora de Define en el studio" fetchPriority="high" />
+            </div>
+            <div className="hero-badge" data-par="-0.09">
+              <b>+10</b><span>Años realzando belleza natural</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Hero;
+}

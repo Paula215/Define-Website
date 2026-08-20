@@ -1,44 +1,49 @@
 import { Link } from 'react-router-dom';
-import { FaCaretDown } from "react-icons/fa";
 import PropTypes from 'prop-types';
+import { CaretDown } from './Caret';
 
-const MobileMenu = ({ navLinks, activeDropdown, toggleDropdown, activeSubDropdown, toggleSubDropdown }) => {
+const MobileMenu = ({
+  navLinks,
+  activeDropdown = null,
+  toggleDropdown,
+  activeSubDropdown = null,
+  toggleSubDropdown,
+  whatsapp
+}) => {
   return (
-    <div className="px-2 pt-2 pb-3 space-y-1">
+    <div className="in-d">
       {navLinks.map((item) => (
         <div key={item.id}>
           {item.submenu && item.slug === 'servicios' ? (
             <button
               type="button"
-              className="w-full flex items-center justify-between text-gray-700 hover:text-morado px-3 py-2 text-base font-medium"
+              className="d-link"
+              aria-expanded={activeDropdown === item.id}
               onClick={() => toggleDropdown(item.id)}
             >
               {item.title}
-              <FaCaretDown
-                className={`ml-1 transform transition-transform ${activeDropdown === item.id ? "rotate-180" : ""}`}
-              />
+              <CaretDown className={`d-caret${activeDropdown === item.id ? ' open' : ''}`} />
             </button>
           ) : (
             <Link
               to={item.link}
-              className="w-full flex items-center justify-between text-gray-700 hover:text-morado px-3 py-2 text-base font-medium"
+              className="d-link"
               onClick={() => toggleDropdown(item.id)}
             >
               {item.title}
               {item.submenu && (
-                <FaCaretDown
-                  className={`ml-1 transform transition-transform ${activeDropdown === item.id ? "rotate-180" : ""}`}
-                />
+                <CaretDown className={`d-caret${activeDropdown === item.id ? ' open' : ''}`} />
               )}
             </Link>
           )}
+
           {item.submenu && activeDropdown === item.id && (
-            <div className="pl-4">
+            <div className="d-sub">
               {item.submenu.map((subItem) => (
                 <div key={subItem.id}>
                   <Link
                     to={subItem.submenu ? subItem.link : `${subItem.link}?subcategory=${encodeURIComponent(subItem.title)}`}
-                    className="w-full flex items-center justify-between text-gray-600 hover:text-morado px-3 py-2 text-base"
+                    className="d-link"
                     onClick={(e) => {
                       if (subItem.submenu) {
                         e.preventDefault();
@@ -48,18 +53,17 @@ const MobileMenu = ({ navLinks, activeDropdown, toggleDropdown, activeSubDropdow
                   >
                     {subItem.title}
                     {subItem.submenu && (
-                      <FaCaretDown
-                        className={`ml-1 transform transition-transform ${activeSubDropdown === subItem.id ? "rotate-180" : ""}`}
-                      />
+                      <CaretDown className={`d-caret${activeSubDropdown === subItem.id ? ' open' : ''}`} />
                     )}
                   </Link>
+
                   {subItem.submenu && activeSubDropdown === subItem.id && (
-                    <div className="pl-4">
+                    <div className="d-sub">
                       {subItem.submenu.map((subSubItem) => (
                         <Link
                           key={subSubItem.id}
                           to={`${subSubItem.link}?subcategory=${encodeURIComponent(subSubItem.title)}`}
-                          className="block px-3 py-2 text-base text-gray-500 hover:text-morado"
+                          className="d-link"
                         >
                           {subSubItem.title}
                         </Link>
@@ -72,6 +76,15 @@ const MobileMenu = ({ navLinks, activeDropdown, toggleDropdown, activeSubDropdow
           )}
         </div>
       ))}
+
+      <a
+        href={whatsapp}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn btn-solid drawer-cta"
+      >
+        Reservar cita
+      </a>
     </div>
   );
 };
@@ -89,13 +102,8 @@ MobileMenu.propTypes = {
   activeDropdown: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.oneOf([null])]),
   toggleDropdown: PropTypes.func.isRequired,
   activeSubDropdown: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.oneOf([null])]),
-  toggleSubDropdown: PropTypes.func.isRequired
-};
-
-// Valores por defecto
-MobileMenu.defaultProps = {
-  activeDropdown: null,
-  activeSubDropdown: null
+  toggleSubDropdown: PropTypes.func.isRequired,
+  whatsapp: PropTypes.string.isRequired
 };
 
 export default MobileMenu;

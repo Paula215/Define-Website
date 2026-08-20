@@ -34,9 +34,10 @@ export default function ServiceCard({ service }) {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-      {/* Carrusel de imágenes */}
-      <div className="relative h-64">
+    // h-full + flex-col => todas las tarjetas tienen la misma altura dentro de la grilla
+    <div className="h-full flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-1">
+      {/* Carrusel de imágenes (altura fija => uniforme) */}
+      <div className="relative h-56 sm:h-64 flex-shrink-0 group">
         {!imageLoaded && !imageError && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#4A235A]"></div>
@@ -45,7 +46,7 @@ export default function ServiceCard({ service }) {
         <img
           src={imageError ? "/placeholder.png" : service.images[currentImageIndex]}
           alt={service.title}
-          className={`w-full h-full object-cover ${!imageLoaded && !imageError ? "hidden" : ""}`}
+          className={`w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 ${!imageLoaded && !imageError ? "hidden" : ""}`}
           onError={handleImageError}
           onLoad={handleImageLoad}
         />
@@ -53,13 +54,15 @@ export default function ServiceCard({ service }) {
           <>
             <button
               onClick={prevImage}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
+              aria-label="Imagen anterior"
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white w-9 h-9 flex items-center justify-center rounded-full transition-colors"
             >
               ←
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
+              aria-label="Imagen siguiente"
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white w-9 h-9 flex items-center justify-center rounded-full transition-colors"
             >
               →
             </button>
@@ -67,20 +70,19 @@ export default function ServiceCard({ service }) {
         )}
       </div>
 
-      {/* Contenido */}
-      <div className="p-6">
-        <div className="flex justify-between items-start mb-4">
-          <div>
-            <span className="text-sm text-[#4A235A] font-medium">{service.subcategory}</span>
-            <h3 className="text-xl font-bold mt-1">{service.title}</h3>
-          </div>
-        </div>
+      {/* Contenido: flex-1 para llenar la tarjeta y empujar el botón abajo */}
+      <div className="flex-1 flex flex-col p-6">
+        <span className="text-xs sm:text-sm text-[#4A235A] font-medium">{service.subcategory}</span>
+        <h3 className="text-lg sm:text-xl font-bold mt-1">{service.title}</h3>
 
-        <p className="text-gray-600 mb-6">{service.description}</p>
+        {/* flex-grow => la descripción ocupa el espacio disponible, alineando el botón */}
+        <p className="text-sm sm:text-base text-gray-600 mt-3 mb-6 leading-relaxed flex-grow">
+          {service.description}
+        </p>
 
         <button
           onClick={handleWhatsApp}
-          className="w-full bg-[#4A235A] text-white py-2 px-4 rounded-md hover:bg-[#3A1B47] transition-colors flex items-center justify-center gap-2"
+          className="mt-auto w-full bg-[#4A235A] text-white py-2.5 px-4 rounded-lg hover:bg-[#3A1B47] active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2 text-sm sm:text-base"
         >
           <WhatsappIcon size={20} />
           Consultar por WhatsApp
@@ -99,4 +101,3 @@ ServiceCard.propTypes = {
     images: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
 }
-

@@ -1,83 +1,58 @@
 import { Link } from 'react-router-dom';
-import { Card, CardContent } from '../ui/card';
-import Body from '../../assets/images/icons/body.jpg';
-import Depi from '../../assets/images/icons/depi.jpg';
-import Skin from '../../assets/images/icons/skincare.jpg';
-import Eye from '../../assets/images/icons/lashing.jpg';
-import Micropigmantation from '../../assets/images/icons/lashing.jpg';
+import { useTilt } from '../../hooks/useMotion';
+import skincare from '../../assets/images/icons/skincare.jpg';
+import lashing from '../../assets/images/icons/lashing.jpg';
+import plasma from '../../assets/images/services/rejuvenecimiento/plasma.png';
+import depi from '../../assets/images/icons/depi.jpg';
+import body from '../../assets/images/icons/body.jpg';
+import intra from '../../assets/images/services/inyectables/intravenosa.png';
+
+const services = [
+  { n: '01', img: skincare, t: 'Peelings y limpiezas faciales', d: 'Elimina impurezas, manchas y signos de envejecimiento para un rostro luminoso y uniforme.', to: '/services/peelings-y-limpiezas-faciales' },
+  { n: '02', img: lashing, t: 'Cejas, pestañas y micropigmentación', d: 'Realza tu mirada con diseño de cejas, extensiones de pestañas y micropigmentación de acabado natural.', to: '/services/cejas-pestanas-micropigmentacion' },
+  { n: '03', img: plasma, t: 'Rejuvenecimiento', d: 'Tratamientos para reducir arrugas, mejorar la firmeza y revitalizar la piel del rostro y el cuello.', to: '/services/rejuvenecimiento' },
+  { n: '04', img: depi, t: 'Depilación', d: 'Piel suave y libre de vello con técnicas seguras, higiénicas y efectivas para cada zona.', to: '/services/depilacion' },
+  { n: '05', img: body, t: 'Tratamientos reductores y estéticos', d: 'Moldea tu cuerpo con mesoterapia, carboxiterapia y protocolos reafirmantes personalizados.', to: '/services/tratamientos-reductores-esteticos' },
+  { n: '06', img: intra, t: 'Aplicaciones intravenosas', d: 'Vitaminas y cócteles formulados para mejorar energía, inmunidad y la apariencia de la piel.', to: '/services/aplicaciones-intravenosas' },
+];
+
+const Arrow = () => (
+  <svg width="18" height="8" viewBox="0 0 18 8" fill="none" stroke="currentColor" strokeWidth="1.2">
+    <path d="M0 4h16M13 1l3 3-3 3" />
+  </svg>
+);
 
 export default function Services() {
-  const services = [
-    {
-      image: Skin,
-      title: "Peelings y Limpiezas faciales",
-      description: "Elimina impurezas, manchas y signos de envejecimiento para un rostro luminoso.",
-      link: "/services/peelings-y-limpiezas-faciales"
-    },
-    {
-      image: Eye,
-      title: "Cejas, Pestañas y Micropigmentación",
-      description: "Realza tu mirada con diseño de cejas, extensiones de pestañas y micropigmentación.",
-      link: "/services/cejas-pestanas-micropigmentacion"
-    },
-    {
-      image: Micropigmantation,
-      title: "Rejuvenecimiento",
-      description: "Tratamientos para reducir arrugas, mejorar firmeza y revitalizar tu piel.",
-      link: "/services/rejuvenecimiento"
-    },
-    {
-      image: Depi,
-      title: "Depilación",
-      description: "Piel suave y libre de vello con técnicas seguras y efectivas.",
-      link: "/services/depilacion"
-    },
-    {
-      image: Body,
-      title: "Tratamientos Reductores y esteticos",
-      description: "Moldea tu cuerpo con mesoterapia, carboxiterapia y reafirmantes.",
-      link: "/services/tratamientos-reductores-esteticos"
-    },
-    {
-      image: Body,
-      title: "Aplicaciones Intravenosas",
-      description: "Vitaminas y cócteles para mejorar energía, inmunidad y apariencia.",
-      link: "/services/aplicaciones-intravenosas"
-    },
-  ];
+  useTilt('.card');
 
   return (
-    <section className="py-10 bg-hueso">
-      <h2 className="text-xl md:text-2xl lg:text-2xl font-medium text-center font-secondary stext-morado">
-        Nuestros servicios
-      </h2>
-      <p className="text-sm md:text-base lg:text-sm text-gray-700 py-10 text-center">
-        Conoce todos los servicios que ofrecemos para ti.
-      </p>
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-        {services.map((service, index) => (
-          <Link to={service.link} key={index} className="mx-auto">
-            <Card className="bg-gris mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer items-center">
-              <CardContent className="py-10 flex flex-col items-center space-y-4 h-full ">
-                <img
-                  className="w-24 h-24 rounded-full object-cover mx-auto"
-                  src={service.image || "/placeholder.svg"}
-                  alt={service.title}
-                />
-                <div className="text-center">
-                  <h3 className="text-xl md:text-xl lg:text-2xl py-6 text-morado font-secondary font-medium">
-                    {service.title}
-                  </h3>
-                  <p className="text-plomo text-sm md:text-base lg:text-sm">
-                    {service.description}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </Link>
-        ))}
+    <section id="servicios" className="sec" style={{ background: 'var(--sand)', paddingBottom: 0 }}>
+      <div className="wrap">
+        <div className="sec-head rv">
+          <div>
+            <p className="eyebrow">Servicios</p>
+            <h2 className="d" style={{ marginTop: '1.25rem' }}>Tratamientos<br />pensados para ti</h2>
+          </div>
+          <p>Seis líneas de trabajo que combinan diagnóstico, técnica y productos de alta calidad. Cada tratamiento se adapta a tu piel y a tus rasgos.</p>
+        </div>
       </div>
+      <div className="wrap" style={{ paddingInline: 0 }}>
+        <div className="cards">
+          {services.map((s) => (
+            <Link key={s.n} to={s.to} className="card rv">
+              <div className="c-top">
+                <span className="c-num">{s.n}</span>
+                <span className="ph c-img"><img src={s.img} alt="" loading="lazy" /></span>
+              </div>
+              <h3 className="c-t">{s.t}</h3>
+              <p className="c-d">{s.d}</p>
+              <span className="glare"></span>
+              <span className="c-more">Ver más <Arrow /></span>
+            </Link>
+          ))}
+        </div>
+      </div>
+      <div style={{ height: 'clamp(4.5rem,10vw,9rem)' }}></div>
     </section>
   );
 }
-

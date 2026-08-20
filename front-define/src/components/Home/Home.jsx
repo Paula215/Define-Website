@@ -1,15 +1,27 @@
-import Hero from '../Home/Hero'
-import NosotrosSection from '../Home/Us'
-import Service from '../Home/Services'
-import Scchedule from '../Home/Schedule'
+import { useReveal } from '../../hooks/useMotion';
+import Hero from './Hero';
+import Marquee from './Marquee';
+import Us from './Us';
+import Services from './Services';
+import Process from './Process';
+import Quote from './Quote';
+import Gallery from './Gallery';
+import Contact from './Contact';
+import CtaBand from './CtaBand';
 
 export default function Home() {
+  useReveal();
   return (
-    <>
+    <main>
       <Hero />
-      <NosotrosSection />
-      <Service />
-      <Scchedule />
-    </>
-  )
+      <Marquee />
+      <Us />
+      <Services />
+      <Process />
+      <Quote />
+      <Gallery />
+      <Contact />
+      <CtaBand />
+    </main>
+  );
 }
