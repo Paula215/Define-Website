@@ -1,6 +1,6 @@
 const steps = [
   { n: '01', t: 'Diagnóstico', d: 'Evaluamos tu piel y tus rasgos en una consulta sin costo para definir el tratamiento adecuado.' },
-  { n: '02', t: 'Diseño', d: 'Trazamos y acordamos contigo la forma, el tono y la intensidad antes de comenzar.' },
+  { n: '02', t: 'Diseño y procedimiento', d: 'Acordamos contigo el diseño cuando el servicio lo lleva, y en todos te explicamos el procedimiento antes de comenzar.' },
   { n: '03', t: 'Seguimiento', d: 'Acompañamos el proceso de cicatrización y programamos el retoque cuando corresponde.' },
 ];
 
