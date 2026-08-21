@@ -23,12 +23,15 @@ const Navbar = () => {
 
   const location = useLocation();
   const isHome = location.pathname === '/';
+  // En /services el header va transparente e invertido sobre la banda morada.
+  const isServices = location.pathname.startsWith('/services');
   const [scrolled, setScrolled] = useState(false);
   const drawer = useRef(null);
   const [drawerHeight, setDrawerHeight] = useState('0px');
 
-  // El header es transparente sobre el hero y se vuelve sólido al bajar.
-  // En páginas internas va siempre sólido, porque no hay hero detrás.
+  // El header es transparente sobre el hero (y sobre el banner de servicios)
+  // y se vuelve sólido al bajar. En el resto de páginas internas va siempre
+  // sólido, porque no hay nada oscuro detrás.
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
@@ -53,7 +56,12 @@ const Navbar = () => {
   }, [menuOpen, activeDropdown, activeSubDropdown]);
 
   return (
-    <header className={scrolled || !isHome ? 'solid' : ''} ref={navRef}>
+    <header
+      className={[scrolled || (!isHome && !isServices) ? 'solid' : '', isServices ? 'inv' : '']
+        .filter(Boolean)
+        .join(' ')}
+      ref={navRef}
+    >
       <div className="wrap navbar">
         <Link to="/" className="logo" aria-label="Define — inicio">
           <img src={logo} alt="Define" />

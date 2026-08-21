@@ -43,8 +43,9 @@ export function useParallax(imgRef) {
   }, [imgRef]);
 }
 
-/** Inclinación 3D suave en las cards (solo escritorio con puntero fino). */
-export function useTilt(selector = '.card') {
+/** Inclinación 3D suave en las cards (solo escritorio con puntero fino).
+ *  `dep` re-conecta los listeners cuando la lista de cards cambia (p. ej. al filtrar). */
+export function useTilt(selector = '.card', dep = null) {
   useEffect(() => {
     if (matchMedia('(prefers-reduced-motion:reduce)').matches) return;
     if (!matchMedia('(hover:hover) and (pointer:fine)').matches) return;
@@ -70,5 +71,5 @@ export function useTilt(selector = '.card') {
       cleanups.push(() => { c.removeEventListener('pointermove', move); c.removeEventListener('pointerleave', leave); });
     });
     return () => cleanups.forEach((fn) => fn());
-  }, [selector]);
+  }, [selector, dep]);
 }

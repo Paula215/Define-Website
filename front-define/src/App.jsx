@@ -53,14 +53,16 @@ const ScrollToLocation = () => {
 
 const Layout = () => {
   const { pathname } = useLocation();
+  // El hero del home y el banner de /services son a sangre y compensan ellos
+  // mismos el header fijo; el resto de páginas necesita el relleno.
   const isHome = pathname === '/';
+  const selfOffset = isHome || pathname.startsWith('/services');
 
   return (
     <div className="overflow-x-hidden">
       <ScrollToLocation />
       <Navbar />
-      {/* El header es fijo: las páginas internas necesitan compensar su alto. */}
-      <div className={isHome ? undefined : 'page-offset'}>
+      <div className={selfOffset ? undefined : 'page-offset'}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicesPage />} />
