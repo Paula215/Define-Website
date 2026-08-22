@@ -209,3 +209,33 @@ footer .logo small{color:rgba(255,255,255,.45)}
 .fbot{border-top:1px solid rgba(255,255,255,.14);padding-block:1.5rem;display:flex;flex-wrap:wrap;gap:.75rem;justify-content:space-between;color:rgba(255,255,255,.4);font-size:11px;letter-spacing:.08em}
 .wa{position:fixed;right:clamp(1rem,3vw,2rem);bottom:clamp(1rem,3vw,2rem);z-index:70;width:56px;height:56px;border-radius:999px;background:var(--plum);color:#fff;display:grid;place-items:center;box-shadow:0 16px 36px -14px rgba(81,31,82,.9);transition:transform .4s cubic-bezier(.16,1,.3,1)}
 .wa:hover{transform:scale(1.08) translateY(-2px);color:#fff}
+
+/* ── Páginas internas con banda morada (servicios, quiénes somos) ──
+   El header se invierte a blanco mientras está sobre la banda, y el banner
+   compensa él mismo el alto del header fijo: esas rutas no llevan
+   .page-offset porque la banda tiene que pasar por debajo del header. */
+/* Header invertido sobre la banda morada.
+   Los selectores apuntan a .nav-link porque el menú de escritorio mezcla
+   enlaces y botones (los que abren desplegable), no solo <a>. */
+header.inv:not(.solid) .logo img{filter:brightness(0) invert(1)}
+header.inv:not(.solid) nav.desk{color:rgba(255,255,255,.78)}
+header.inv:not(.solid) nav.desk .nav-link:hover,
+header.inv:not(.solid) .nav-item.open>.nav-link,
+header.inv:not(.solid) nav.desk .nav-link.current{color:#fff}
+header.inv:not(.solid) nav.desk .nav-link::after{background:#fff}
+header.inv:not(.solid) .burger span{background:#fff}
+header.inv:not(.solid) .nav-cta{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6)}
+header.inv:not(.solid) .nav-cta:hover{background:#fff;color:var(--plum);border-color:#fff}
+
+/* Banner superior — editorial, con la banda morada a sangre. */
+.banner{position:relative;background:var(--plum);color:#fff;overflow:hidden;padding-top:calc(var(--nav-h) + clamp(2rem,4vw,3.25rem));padding-bottom:clamp(2rem,4vw,3.25rem)}
+.banner::before{content:"";position:absolute;right:calc(var(--pad)*-.4);top:-18%;width:clamp(180px,26vw,420px);aspect-ratio:1;border:1px solid rgba(255,255,255,.16);border-radius:999px;pointer-events:none}
+.banner::after{content:"";position:absolute;right:clamp(2rem,10vw,10rem);bottom:-38%;width:clamp(140px,20vw,320px);aspect-ratio:1;border:1px solid rgba(255,255,255,.1);border-radius:999px;pointer-events:none}
+.banner .wrap{position:relative}
+.banner .eyebrow{color:rgba(255,255,255,.5)}
+.banner h1{font-size:clamp(2.2rem,5vw,3.6rem);color:#fff;margin-top:clamp(.85rem,1.6vw,1.25rem);max-width:20ch}
+.banner .foot{display:grid;gap:1.25rem;margin-top:clamp(1.5rem,3vw,2.25rem);padding-top:clamp(1.25rem,2.4vw,1.6rem);border-top:1px solid rgba(255,255,255,.2)}
+@media(min-width:800px){.banner .foot{grid-template-columns:1fr auto;align-items:end;gap:3rem}}
+.banner .foot p{color:rgba(255,255,255,.72);max-width:44ch}
+.banner .foot .n{font-family:Vidaloka,serif;font-size:clamp(2rem,4.5vw,3.25rem);line-height:1;color:#fff;white-space:nowrap}
+.banner .foot .n em{font-style:normal;font-family:Inter,sans-serif;font-size:var(--s1);letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);display:block;margin-top:.6rem}

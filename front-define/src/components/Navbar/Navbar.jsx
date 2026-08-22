@@ -23,8 +23,11 @@ const Navbar = () => {
 
   const location = useLocation();
   const isHome = location.pathname === '/';
-  // En /services el header va transparente e invertido sobre la banda morada.
-  const isServices = location.pathname.startsWith('/services');
+  // Sobre la banda morada (servicios y quiénes somos) el header va
+  // transparente e invertido a blanco.
+  const onPlum =
+    location.pathname.startsWith('/services') ||
+    location.pathname.startsWith('/quien-soy');
   const [scrolled, setScrolled] = useState(false);
   const drawer = useRef(null);
   const [drawerHeight, setDrawerHeight] = useState('0px');
@@ -57,7 +60,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={[scrolled || (!isHome && !isServices) ? 'solid' : '', isServices ? 'inv' : '']
+      className={[scrolled || (!isHome && !onPlum) ? 'solid' : '', onPlum ? 'inv' : '']
         .filter(Boolean)
         .join(' ')}
       ref={navRef}

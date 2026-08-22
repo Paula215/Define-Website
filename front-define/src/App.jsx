@@ -53,10 +53,13 @@ const ScrollToLocation = () => {
 
 const Layout = () => {
   const { pathname } = useLocation();
-  // El hero del home y el banner de /services son a sangre y compensan ellos
-  // mismos el header fijo; el resto de páginas necesita el relleno.
+  // El hero del home y los banners de /services y /quien-soy son a sangre y
+  // compensan ellos mismos el header fijo; el resto necesita el relleno.
   const isHome = pathname === '/';
-  const selfOffset = isHome || pathname.startsWith('/services');
+  const selfOffset =
+    isHome ||
+    pathname.startsWith('/services') ||
+    pathname.startsWith('/quien-soy');
 
   return (
     <div className="overflow-x-hidden">

@@ -1,82 +1,84 @@
+import { useReveal } from '../../hooks/useMotion';
+
+const VIDEO = 'https://res.cloudinary.com/ddjy2qnvw/video/upload/v1767924214/queesdefine_ivbrih.mp4';
+const RETRATO = 'https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767924215/fundadora_tec6w2.jpg';
+
 export default function QuienSoy() {
+  useReveal();
+
   return (
-    <section className="bg-morado py-16">
-      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',border:0}}>
-        Quiénes somos - Define Belleza integral
-      </h1>
-      <div className="container mx-auto px-4 space-y-12">
-      {/* ===== CARD 1: VIDEO + TEXTO ===== */}
-      <div className="bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 rounded-3xl shadow-xl overflow-hidden">
-        <div className="flex flex-col md:flex-row">
-          
-          {/* Video */}
-          <div className="md:w-2/5 shrink-0 flex items-center justify-center p-6 md:p-8">
-            <div className="w-full max-w-sm">
-              <video
-                src="https://res.cloudinary.com/ddjy2qnvw/video/upload/v1767924214/queesdefine_ivbrih.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                controls
-                className="w-full h-auto rounded-2xl shadow-lg"
-                />
-         </div>
+    <main className="quien-soy">
+      <section className="banner">
+        <div className="wrap">
+          <p className="eyebrow">Studio de belleza · San Borja</p>
+          <h1 className="d">Quiénes somos</h1>
+          <div className="foot">
+            <p>Estética integral con criterio clínico y trato humano. Conoce el studio y a quien está detrás de cada tratamiento.</p>
+            <p className="n">+10<em>Años del studio</em></p>
           </div>
-
-          {/* Texto */}
-          <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center space-y-6">
-            <h2 className="text-xl lg:text-2xl font-secondary text-morado font-medium">
-              Quiénes somos
-            </h2>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              Somos un centro especializado en estética integral, enfocado en
-              realzar la belleza natural a través de tratamientos seguros,
-              personalizados y respaldados por tecnología moderna.
-            </p>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              Creemos en el cuidado consciente, la confianza y el bienestar
-              como parte esencial de cada tratamiento.
-            </p>
-          </div>
-
         </div>
-      </div>
+      </section>
 
-        {/* ===== CARD 2: FUNDADORA ===== */}
-        <div className="rounded-3xl p-8 md:p-12">
-          <div className="flex flex-col items-center text-center max-w-3xl mx-auto space-y-8">
-            {/* Imagen circular con borde decorativo */}
-            <div className="relative">
-              <div className="absolute inset-0 bg-morado/10 rounded-full blur-2xl"></div>
-              <img
-                src="https://res.cloudinary.com/ddjy2qnvw/image/upload/v1767924215/fundadora_tec6w2.jpg"
-                alt="Fundadora"
-                className="relative w-48 h-48 rounded-full object-cover shadow-xl border-4 border-white"
-              />
-            </div>
-            {/* Texto fundadora */}
-            <div className="space-y-6">
-              <h3 className="text-xl lg:text-1xl font-secondary text-white font-medium">
-                Mirella Cienfuegos
-              </h3>
-               {/* Línea divisoria decorativa */}
-            <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mx-auto"></div>
-            <p className="text-white leading-relaxed text-lg"></p>
-              <p className="text-white leading-relaxed text-lg">
-                Profesional en estética con más de 15 años de experiencia,
-                especializada en tratamientos faciales y corporales. Su
-                trayectoria se basa en la formación continua, la ética
-                profesional y el trato humano con cada paciente.
-              </p>
-              <p className="text-white leading-relaxed text-lg">
-                Su misión es acompañar a cada persona en su proceso de cuidado
-                personal, ofreciendo resultados reales y seguros.
-              </p>
+      <section className="sec">
+        <div className="wrap about">
+          <div className="vid rv">
+            <video src={VIDEO} autoPlay loop muted playsInline controls />
+          </div>
+          <div className="about-copy rv" style={{ transitionDelay: '.1s' }}>
+            <p className="eyebrow">El studio</p>
+            <h2 className="d" style={{ marginTop: '1rem' }}>Estética integral, cuidada en cada detalle</h2>
+            <p className="lead">
+              Somos un centro especializado en estética integral, enfocado en realzar la belleza natural
+              a través de tratamientos seguros, personalizados y respaldados por tecnología moderna.
+            </p>
+            <p className="body">
+              Creemos en el cuidado consciente, la confianza y el bienestar como parte esencial de cada tratamiento.
+            </p>
+            <div className="pillars">
+              <div><p className="k">01</p><p className="v">Cuidado consciente</p></div>
+              <div><p className="k">02</p><p className="v">Confianza</p></div>
+              <div><p className="k">03</p><p className="v">Bienestar</p></div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="founder sec">
+        <div className="wrap grid">
+          <div className="portrait rv">
+            <img src={RETRATO} alt="Mirella Cienfuegos, fundadora de Define" loading="lazy" />
+          </div>
+          <div className="rv" style={{ transitionDelay: '.1s' }}>
+            <p className="eyebrow">La fundadora</p>
+            <h2 className="d">Mirella Cienfuegos</h2>
+            <p className="role">Especialista en estética integral</p>
+            <p className="t">
+              Profesional en estética con más de 15 años de experiencia, especializada en tratamientos
+              faciales y corporales. Su trayectoria se basa en la formación continua, la ética profesional
+              y el trato humano con cada paciente.
+            </p>
+            <p className="t">
+              Su misión es acompañar a cada persona en su proceso de cuidado personal, ofreciendo
+              resultados reales y seguros.
+            </p>
+            <div className="stats">
+              <div><b>+15</b><span>Años de experiencia</span></div>
+              <div><b>Facial</b><span>y corporal</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="sec cta-soft">
+        <div className="wrap rv">
+          <p className="eyebrow">Agenda tu cita</p>
+          <h2 className="d">Conversemos sobre lo que buscas</h2>
+          <p>Te damos un diagnóstico honesto y una recomendación clara, sin compromiso.</p>
+          <a href="https://wa.me/51958336208" target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+            Escribir por WhatsApp
+          </a>
+        </div>
+      </section>
+    </main>
   );
 }
