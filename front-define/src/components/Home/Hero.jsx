@@ -29,7 +29,7 @@ export default function Hero() {
               <img ref={img} src={retrato} alt="Fundadora de Define en el studio" fetchPriority="high" />
             </div>
             <div className="hero-badge" data-par="-0.09">
-              <b>+10</b><span>Años realzando belleza natural</span>
+              <b>+15</b><span>Años realzando belleza natural</span>
             </div>
           </div>
         </div>
