@@ -1,14 +1,3 @@
-// Función de normalización consistente
-export const normalizeSlug = (text) => {
-  return text
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/ñ/g, 'n')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
-};
-
 export const NavLinks = [
   { 
     id: 1, 
@@ -114,32 +103,6 @@ export const NavLinks = [
     link: "/quien-soy",
     slug: "quien-soy"
   },
-  // {
-  //   id: 4,
-  //   title: "Cursos Define",
-  //   link: "/cursos",
-  //   slug: "cursos",
-  //   submenu: [
-  //     { 
-  //       id: "curso-1", 
-  //       title: "Básico: Micropigmentación cejas, labios, ojos", 
-  //       link: "/cursos/basico",
-  //       slug: "basico"
-  //     },
-  //     { 
-  //       id: "curso-2", 
-  //       title: "Intermedio: Micropigmentación labios", 
-  //       link: "/cursos/intermedio-labios",
-  //       slug: "intermedio-labios"
-  //     },
-  //     { 
-  //       id: "curso-3", 
-  //       title: "Intermedio: Micropigmentación ojos", 
-  //       link: "/cursos/intermedio-ojos",
-  //       slug: "intermedio-ojos"
-  //     },
-  //   ],
-  // },
   {
     id: 4,
     title: "Contacto",
@@ -147,25 +110,3 @@ export const NavLinks = [
     slug: "contacto"
   }
 ];
-
-// Helper para buscar servicios por slug
-export const findServiceBySlug = (slug) => {
-  const services = NavLinks.find(link => link.id === 2)?.submenu || [];
-  
-  for (const service of services) {
-    if (service.slug === slug) return service;
-    
-    if (service.submenu) {
-      const subService = service.submenu.find(sub => sub.slug === slug);
-      if (subService) return subService;
-    }
-  }
-  
-  return null;
-};
-
-// Helper para buscar cursos por slug
-export const findCursoBySlug = (slug) => {
-  const cursos = NavLinks.find(link => link.id === 4)?.submenu || [];
-  return cursos.find(curso => curso.slug === slug);
-};

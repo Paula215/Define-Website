@@ -26,7 +26,7 @@ export default function Hero() {
         <div className="rv" style={{ transitionDelay: '.12s' }}>
           <div className="ph hero-media">
             <div className="hero-frame">
-              <img ref={img} src={retrato} alt="Fundadora de Define en el studio" fetchPriority="high" />
+              <img ref={img} src={retrato} alt="Fundadora de Define en el studio" fetchpriority="high" />
             </div>
             <div className="hero-badge" data-par="-0.09">
               <b>+15</b><span>Años realzando belleza natural</span>

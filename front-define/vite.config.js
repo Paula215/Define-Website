@@ -7,9 +7,4 @@ export default defineConfig({
     react(),
     // Compression moved to post-build script to ensure correct output paths
   ],
-  resolve: {
-    alias: {
-      'lucide-react': '/node_modules/lucide-react',
-    },
-  },
 })
