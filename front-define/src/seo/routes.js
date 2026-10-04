@@ -2,6 +2,7 @@
 // descripción: si se repiten, Google elige una sola página y descarta el resto
 // como contenido duplicado.
 import { OG_IMAGE, breadcrumbLd } from './site.js';
+import { microRoute } from './micropigmentacion.js';
 
 const BRAND = 'Define';
 const PLACE = 'San Borja, Lima';
@@ -10,9 +11,9 @@ export const CATEGORIES = [
   {
     slug: 'cejas-pestanas-micropigmentacion',
     label: 'Cejas, Pestañas y Micropigmentación',
-    title: `Micropigmentación de Cejas y Pestañas en San Borja | ${BRAND}`,
+    title: `Micropigmentación de Cejas, Microblading y Pestañas en San Borja | ${BRAND}`,
     description:
-      'Micropigmentación de cejas, diseño de cejas y extensiones de pestañas con acabado natural en San Borja, Lima. Diagnóstico previo y técnicas de larga duración.',
+      'Micropigmentación de cejas con microblading y microshading, diseño de cejas y extensiones de pestañas con acabado natural en San Borja, Lima. Diagnóstico sin costo.',
     subs: [
       {
         slug: 'cejas',
@@ -31,9 +32,9 @@ export const CATEGORIES = [
       {
         slug: 'micropigmentacion',
         label: 'Micropigmentación',
-        title: `Micropigmentación de Cejas y Labios en ${PLACE} | ${BRAND}`,
+        title: `Maquillaje Permanente de Cejas, Labios y Ojos en ${PLACE} | ${BRAND}`,
         description:
-          'Micropigmentación semipermanente de cejas, labios y ojos con más de 10 años de experiencia en San Borja, Lima. Pigmentos seguros y acabado natural.',
+          'Microblading, powder brows, técnica híbrida, delineado y full color de labios y ojos. Maquillaje permanente natural con más de 10 años de experiencia en San Borja.',
       },
     ],
   },
@@ -111,9 +112,9 @@ export const CATEGORIES = [
 
 const HOME = {
   path: '/',
-  title: 'Define | Micropigmentación y Estética en San Borja, Lima',
+  title: 'Define | Micropigmentación de Cejas y Microblading en San Borja, Lima',
   description:
-    'Studio de belleza en San Borja, Lima con más de 10 años en micropigmentación de cejas, faciales, rejuvenecimiento y depilación. Agenda tu cita por WhatsApp.',
+    'Studio en San Borja con más de 10 años en micropigmentación de cejas: microblading, microshading y maquillaje permanente natural. También faciales y depilación.',
   breadcrumb: [{ name: 'Inicio', path: '/' }],
 };
 
@@ -154,6 +155,7 @@ const STATIC_ROUTES = [
 // Todas las URLs indexables, en el orden en que las quiere el sitemap.
 export const ROUTES = [
   ...STATIC_ROUTES,
+  microRoute,
   ...CATEGORIES.flatMap((cat) => [
     {
       path: `/services/${cat.slug}`,
@@ -197,6 +199,9 @@ export const seoFor = (pathname = '/') => {
     canonical: route.path,
     image: route.image || OG_IMAGE,
     noindex: !match,
-    ld: route.breadcrumb && route.breadcrumb.length > 1 ? [breadcrumbLd(route.breadcrumb)] : [],
+    ld: [
+      ...(route.breadcrumb && route.breadcrumb.length > 1 ? [breadcrumbLd(route.breadcrumb)] : []),
+      ...(route.extraLd ? route.extraLd() : []),
+    ],
   };
 };

@@ -5,6 +5,7 @@ import DesktopMenu from './DesktopMenu';
 import MobileMenu from './MobileMenu';
 import { useNavbarState } from './useNavbarState';
 import logo from '../../assets/images/logo-sinfondo.png';
+import { MICRO_PATH } from '../../seo/micropigmentacion';
 
 const WHATSAPP = 'https://wa.me/51958336208';
 
@@ -23,11 +24,12 @@ const Navbar = () => {
 
   const location = useLocation();
   const isHome = location.pathname === '/';
-  // Sobre la banda morada (servicios y quiénes somos) el header va
+  // Sobre la banda morada (servicios, quiénes somos y micropigmentación) el header va
   // transparente e invertido a blanco.
   const onPlum =
     location.pathname.startsWith('/services') ||
-    location.pathname.startsWith('/quien-soy');
+    location.pathname.startsWith('/quien-soy') ||
+    location.pathname.startsWith(MICRO_PATH);
   const [scrolled, setScrolled] = useState(false);
   const drawer = useRef(null);
   const [drawerHeight, setDrawerHeight] = useState('0px');

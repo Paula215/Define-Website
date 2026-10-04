@@ -35,6 +35,12 @@ export const NavLinks = [
             link: "/services/cejas-pestanas-micropigmentacion/micropigmentacion",
             slug: "micropigmentacion"
           },
+          {
+            id: "subservice-4",
+            title: "Microblading y microshading",
+            link: "/micropigmentacion-cejas-san-borja",
+            slug: "micropigmentacion-cejas-san-borja"
+          },
         ],
       },
       {

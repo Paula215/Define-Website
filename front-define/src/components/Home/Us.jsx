@@ -1,5 +1,6 @@
 import studio from '../../assets/images/services/faciales/facial2-1.jpg';
 import cabina from '../../assets/images/micropigmentacion2-1.jpeg';
+import { Link } from 'react-router-dom';
 
 export default function Us() {
   return (
@@ -12,7 +13,7 @@ export default function Us() {
         <div className="about-copy rv" style={{ transitionDelay: '.1s' }}>
           <p className="eyebrow">Nosotros</p>
           <h2 className="d" style={{ margin: '1.25rem 0 1.75rem' }}>Precisión, confianza y excelencia en cada detalle</h2>
-          <p><strong>Define</strong> es un studio de belleza especializado en micropigmentación, con más de <strong>10 años de experiencia</strong> realzando la belleza natural de cada persona.</p>
+          <p><strong>Define</strong> es un studio de belleza especializado en <Link to="/micropigmentacion-cejas-san-borja" className="inline-link">micropigmentación de cejas</Link> —microblading, microshading y técnica híbrida—, con más de <strong>10 años de experiencia</strong> realzando la belleza natural de cada persona.</p>
           <p>Ofrecemos un servicio personalizado, basado en un diagnóstico detallado y en el uso de técnicas avanzadas y productos de alta calidad, para garantizar resultados armónicos, seguros y duraderos.</p>
           <p>Nuestro compromiso es que cada tratamiento refleje confianza, precisión y excelencia en cada detalle.</p>
           <a href="#contacto" className="btn btn-ghost" style={{ color: 'var(--plum)', marginTop: '2rem' }}>Conversemos</a>

@@ -8,6 +8,8 @@ import Home from './components/Home/Home';
 import QuienSoy from './components/Pages/QuienSoy';
 import Contacto from './components/Pages/Contacto';
 import ServicesPage from './components/Pages/Service';
+import Micropigmentacion from './components/Pages/Micropigmentacion';
+import { MICRO_PATH } from './seo/micropigmentacion';
 
 // Al navegar: arriba de todo, o al ancla si la URL trae hash (#servicios, #contacto…).
 const ScrollToLocation = () => {
@@ -54,13 +56,15 @@ const ScrollToLocation = () => {
 
 const Layout = () => {
   const { pathname } = useLocation();
-  // El hero del home y los banners de /services y /quien-soy son a sangre y
+  // El hero del home y los banners de /services, /quien-soy y la landing de
+  // micropigmentación son a sangre y
   // compensan ellos mismos el header fijo; el resto necesita el relleno.
   const isHome = pathname === '/';
   const selfOffset =
     isHome ||
     pathname.startsWith('/services') ||
-    pathname.startsWith('/quien-soy');
+    pathname.startsWith('/quien-soy') ||
+    pathname.startsWith(MICRO_PATH);
 
   return (
     <div className="overflow-x-hidden">
@@ -75,6 +79,7 @@ const Layout = () => {
           <Route path="/services/:category/:subcategory" element={<ServicesPage />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/quien-soy" element={<QuienSoy />} />
+          <Route path={MICRO_PATH} element={<Micropigmentacion />} />
         </Routes>
       </div>
       <Footer />

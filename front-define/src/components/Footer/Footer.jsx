@@ -15,6 +15,7 @@ export default function Footer() {
           <h4>Navegación</h4>
           <Link to="/">Inicio</Link>
           <Link to="/services">Servicios</Link>
+          <Link to="/micropigmentacion-cejas-san-borja">Micropigmentación de cejas</Link>
           <Link to="/quien-soy">Nosotros</Link>
           <Link to="/contacto">Contacto</Link>
           <Link to="/#proceso">Proceso</Link>

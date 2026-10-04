@@ -1,0 +1,59 @@
+/* Landing de micropigmentación de cejas.
+   Se importa en src/main.jsx DESPUÉS de define.css, de donde salen los
+   tokens, .banner, .steps y .band. Todo va bajo .micro. */
+
+.micro .banner h1{max-width:18ch}
+
+/* ── Intro ──────────────────────────────────────────── */
+.micro-intro{display:grid;gap:clamp(1.5rem,4vw,4rem);grid-template-columns:1fr}
+@media(min-width:900px){.micro-intro{grid-template-columns:.9fr 1.1fr;align-items:start}}
+.micro-intro h2{margin-top:1.25rem;color:var(--plum)}
+.micro-intro p:not(.eyebrow){color:var(--muted);max-width:56ch}
+.micro-intro p+p{margin-top:1.1rem}
+.micro-actions{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:clamp(1.75rem,3vw,2.25rem)}
+
+/* ── Técnicas ───────────────────────────────────────── */
+.micro-techs{display:grid;grid-template-columns:1fr;gap:clamp(1.5rem,3vw,2.25rem)}
+@media(min-width:760px){.micro-techs{grid-template-columns:1fr 1fr}}
+.micro-tech{background:var(--ivory);display:grid;grid-template-columns:1fr;border-top:1px solid var(--plum)}
+.micro-tech .ph{aspect-ratio:16/10}
+.micro-tech .body{padding:clamp(1.4rem,2.6vw,2rem)}
+.micro-tech .aka{font-size:var(--s1);letter-spacing:.16em;text-transform:uppercase;color:var(--taupe)}
+.micro-tech h3{font-family:Vidaloka,serif;font-weight:400;font-size:var(--h3);color:var(--plum);line-height:1.15;margin-top:.6rem}
+.micro-tech p{color:var(--muted);margin-top:.85rem}
+.micro-tech .ideal{padding-top:.85rem;border-top:1px solid var(--line);font-size:.95em}
+.micro-tech .ideal b{color:var(--ink);font-weight:500}
+
+/* ── Comparación ────────────────────────────────────── */
+.micro-table{border-top:1px solid var(--plum)}
+.micro-table .row{display:grid;grid-template-columns:1fr 1fr;gap:.35rem 1.5rem;padding-block:1.1rem;border-bottom:1px solid var(--line)}
+.micro-table .row>span:first-child{grid-column:1/-1;font-size:var(--s1);letter-spacing:.16em;text-transform:uppercase;color:var(--taupe)}
+.micro-table .head>span:first-child{display:none}
+.micro-table .head span{font-family:Vidaloka,serif;font-size:var(--h3);color:var(--plum);line-height:1.1}
+@media(min-width:760px){
+ .micro-table .row{grid-template-columns:.7fr 1fr 1fr;align-items:baseline}
+ .micro-table .row>span:first-child{grid-column:auto}
+ .micro-table .head>span:first-child{display:block}
+}
+
+/* ── Proceso: cuatro pasos en lugar de tres ─────────── */
+@media(min-width:800px){.micro-steps{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.micro-steps{grid-template-columns:repeat(4,1fr)}}
+
+/* ── Labios y ojos ──────────────────────────────────── */
+.micro-more{text-align:center}
+.micro-more h2{color:var(--plum);margin-top:1.25rem}
+.micro-more p:not(.eyebrow){color:var(--muted);max-width:50ch;margin:1.25rem auto 0}
+.micro-more .btn{margin-top:clamp(1.75rem,3vw,2.25rem)}
+
+/* ── Preguntas frecuentes ───────────────────────────── */
+.micro-faq{display:grid;gap:clamp(2rem,4vw,4rem);grid-template-columns:1fr}
+@media(min-width:900px){.micro-faq{grid-template-columns:.8fr 1.2fr;align-items:start}}
+.micro-faq details{border-bottom:1px solid var(--line)}
+.micro-faq details:first-child{border-top:1px solid var(--plum)}
+.micro-faq summary{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;padding-block:1.25rem;min-height:44px;cursor:pointer;list-style:none;font-family:Vidaloka,serif;font-size:clamp(1.05rem,1.6vw,1.25rem);line-height:1.3;color:var(--plum)}
+.micro-faq summary::-webkit-details-marker{display:none}
+.micro-faq summary::after{content:"+";flex-shrink:0;font-family:Inter,sans-serif;font-size:1.4rem;font-weight:300;color:var(--taupe);transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.micro-faq details[open] summary::after{transform:rotate(45deg)}
+.micro-faq details p{color:var(--muted);padding-bottom:1.35rem;max-width:62ch}
+@media(prefers-reduced-motion:reduce){.micro-faq summary::after{transition:none}}

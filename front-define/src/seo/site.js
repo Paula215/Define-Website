@@ -54,7 +54,17 @@ export const businessLd = () => ({
   name: BUSINESS.name,
   alternateName: BUSINESS.legalName,
   description:
-    'Studio de belleza especializado en micropigmentación de cejas, tratamientos faciales, rejuvenecimiento, depilación y estética corporal en San Borja, Lima.',
+    'Studio de belleza en San Borja, Lima especializado en micropigmentación de cejas (microblading, microshading y técnica híbrida) y maquillaje permanente, además de tratamientos faciales, rejuvenecimiento, depilación y estética corporal.',
+  knowsAbout: [
+    'Micropigmentación de cejas',
+    'Microblading',
+    'Microshading',
+    'Powder brows',
+    'Maquillaje permanente',
+    'Micropigmentación de labios',
+    'Delineado permanente de ojos',
+    'Tratamientos faciales',
+  ],
   url: abs('/'),
   image: OG_IMAGE,
   logo: abs('/logo-define.png'),
@@ -84,6 +94,8 @@ export const businessLd = () => ({
     { '@type': 'AdministrativeArea', name: 'Surco' },
     { '@type': 'AdministrativeArea', name: 'La Molina' },
     { '@type': 'AdministrativeArea', name: 'San Isidro' },
+    { '@type': 'AdministrativeArea', name: 'Surquillo' },
+    { '@type': 'AdministrativeArea', name: 'Miraflores' },
   ],
   sameAs: [BUSINESS.instagram, BUSINESS.facebook, BUSINESS.maps],
   potentialAction: {

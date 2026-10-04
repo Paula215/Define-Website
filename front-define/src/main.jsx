@@ -4,6 +4,7 @@ import './index.css'
 import './styles/define.css'
 import './styles/servicios.css'
 import './styles/quien-soy.css'
+import './styles/micropigmentacion.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(

@@ -24,6 +24,7 @@ const head = (route) => {
   const image = route.image || OG_IMAGE;
   const ld = [businessLd()];
   if (route.breadcrumb && route.breadcrumb.length > 1) ld.push(breadcrumbLd(route.breadcrumb));
+  if (route.extraLd) ld.push(...route.extraLd());
 
   return [
     START,

@@ -213,6 +213,17 @@ export default function ServicesPage() {
         </div>
       </div>
 
+      {/* La categoría de cejas enlaza a la guía de micropigmentación: es la
+          página que posiciona por "microblading" y "microshading". */}
+      {currentSlug === "cejas-pestanas-micropigmentacion" && (
+        <div className="wrap">
+          <Link to="/micropigmentacion-cejas-san-borja" className="svc-guide">
+            <span>¿Microblading o microshading? Conoce las técnicas, el proceso y los cuidados</span>
+            <svg width="18" height="8" viewBox="0 0 18 8" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true"><path d="M0 4h16M13 1l3 3-3 3" /></svg>
+          </Link>
+        </div>
+      )}
+
       {/* Lista de servicios */}
       <section>
         <div className="wrap">
