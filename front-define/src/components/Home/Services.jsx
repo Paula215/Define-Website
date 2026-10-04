@@ -42,7 +42,7 @@ export default function Services() {
             <Link key={s.n} to={s.to} className="card rv">
               <div className="c-top">
                 <span className="c-num">{s.n}</span>
-                <span className="ph c-img"><img src={s.img} alt="" loading="lazy" /></span>
+                <span className="ph c-img"><img src={s.img} alt={s.t} loading="lazy" /></span>
               </div>
               <h3 className="c-t">{s.t}</h3>
               <p className="c-d">{s.d}</p>

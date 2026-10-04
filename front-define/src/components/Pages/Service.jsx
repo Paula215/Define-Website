@@ -165,15 +165,23 @@ export default function ServicesPage() {
       currentSlug.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())
     : "Todos los Servicios";
 
+  // El H1 es la señal más fuerte de tema para el buscador: las seis categorías
+  // comparten plantilla, así que si todas dicen "Nuestros servicios" ninguna
+  // puede posicionar por su propio término.
+  const heading = currentSlug ? currentTitle : "Nuestros servicios";
+  const intro = currentSlug
+    ? `Tratamientos de ${currentTitle.toLowerCase()} en nuestro studio de San Borja, Lima. Cada uno parte de un diagnóstico y se adapta a tu piel.`
+    : "Descubre todos los tratamientos que tenemos para ti. Cada uno parte de un diagnóstico y se adapta a tu piel.";
+
   return (
     <main>
       {/* Banner superior */}
       <section className="banner">
         <div className="wrap">
           <p className="eyebrow">Studio de belleza · San Borja</p>
-          <h1 className="d">Nuestros servicios</h1>
+          <h1 className="d">{heading}</h1>
           <div className="foot">
-            <p>Descubre todos los tratamientos que tenemos para ti. Cada uno parte de un diagnóstico y se adapta a tu piel.</p>
+            <p>{intro}</p>
             {!loading && !error && (
               <p className="n">
                 <span>{filteredServices.length}</span>
@@ -187,7 +195,7 @@ export default function ServicesPage() {
       {/* Título de categoría + filtro de subcategorías */}
       <div className="catbar">
         <div className="wrap in">
-          <h2>{activeSubcategory === "all" ? currentTitle : activeSubcategory}</h2>
+          <h2>{activeSubcategory === "all" ? "Todos los tratamientos" : activeSubcategory}</h2>
           {!loading && !error && subcategories.length > 1 && (
             <div className="filters">
               {subcategories.map((sub) => (

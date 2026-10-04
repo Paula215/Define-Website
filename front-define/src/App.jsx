@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Seo from './components/Seo';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import WhatsappFab from './components/ui/WhatsappFab';
@@ -63,6 +64,7 @@ const Layout = () => {
 
   return (
     <div className="overflow-x-hidden">
+      <Seo />
       <ScrollToLocation />
       <Navbar />
       <div className={selfOffset ? undefined : 'page-offset'}>

@@ -72,14 +72,14 @@ export const NavLinks = [
           { 
             id: "subservice-1", 
             title: "Depilación Corporal", 
-            link: "/services/depilacion/depilacion-laser",
-            slug: "depilacion-laser"
+            link: "/services/depilacion/depilacion-corporal",
+            slug: "depilacion-corporal"
           },
           { 
             id: "subservice-2", 
             title: "Depilación Facial", 
-            link: "/services/depilacion/depilacion-electrica",
-            slug: "depilacion-electrica"
+            link: "/services/depilacion/depilacion-facial",
+            slug: "depilacion-facial"
           },
         ],
       },
