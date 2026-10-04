@@ -31,11 +31,13 @@ export const BUSINESS = {
   whatsapp: 'https://wa.me/51958336208',
   instagram: 'https://www.instagram.com/define.belleza.integral',
   facebook: 'https://www.facebook.com/Define.Belleza.Integral',
-  maps: 'https://www.google.com/maps/place/Defin%C3%A9+Dermopigmentaci%C3%B3n/@-12.1044761,-77.001136,17z',
+  // Enlace por CID (el ID de la ficha, sale del embed del mapa). Con solo el
+  // nombre y las coordenadas, Maps no encuentra la ficha y muestra un punto suelto.
+  maps: 'https://www.google.com/maps?cid=6821069487948054929',
   // Enlace para dejar reseña. Lo ideal es el corto que da Google Business
   // Profile en "Pedir reseñas" (https://g.page/r/…/review): abre directo el
   // formulario de estrellas. Mientras tanto, la ficha del mapa.
-  reviews: 'https://www.google.com/maps/place/Defin%C3%A9+Dermopigmentaci%C3%B3n/@-12.1044761,-77.001136,17z',
+  reviews: 'https://www.google.com/maps?cid=6821069487948054929',
   openingHours: [{ days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '09:00', closes: '20:00' }],
 };
 
