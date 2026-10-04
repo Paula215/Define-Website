@@ -6,6 +6,7 @@ import Services from './Services';
 import Process from './Process';
 import Quote from './Quote';
 import Gallery from './Gallery';
+import Review from './Review';
 import Contact from './Contact';
 import CtaBand from './CtaBand';
 
@@ -21,6 +22,7 @@ export default function Home() {
       <Quote />
       <Gallery />
       <Contact />
+      <Review />
       <CtaBand />
     </main>
   );
