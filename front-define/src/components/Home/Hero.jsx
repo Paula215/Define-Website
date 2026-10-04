@@ -26,6 +26,8 @@ export default function Hero() {
         <div className="rv" style={{ transitionDelay: '.12s' }}>
           <div className="ph hero-media">
             <div className="hero-frame">
+              {/* React 18 no reconoce fetchPriority (llega en React 19): en minúscula pasa tal cual al HTML. */}
+              {/* eslint-disable-next-line react/no-unknown-property */}
               <img ref={img} src={retrato} alt="Fundadora de Define en el studio" fetchpriority="high" />
             </div>
             <div className="hero-badge" data-par="-0.09">

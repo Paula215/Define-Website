@@ -3,7 +3,6 @@ import path from 'path'
 import zlib from 'zlib'
 
 const DIST = path.resolve(process.cwd(), 'dist')
-const ASSETS = path.join(DIST, 'assets')
 const BROTLI_OPTIONS = { params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 } }
 const GZIP_OPTIONS = { level: zlib.constants.Z_BEST_COMPRESSION }
 const THRESHOLD = 10240 // bytes
