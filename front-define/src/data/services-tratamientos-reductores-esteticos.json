@@ -2,6 +2,12 @@
   "category": "Tratamientos Corporales",
   "services": [
     {
+      "id": 1,
+      "title": "Masajes Reductores",
+      "description": "Masajes corporales que ayudan a moldear la figura, reducir medidas y mejorar la circulación y la textura de la piel.",
+      "images": []
+    },
+    {
       "id": 3,
       "title": "Tratamientos Reafirmantes",
       "description": "Protocolos corporales diseñados para mejorar la firmeza y elasticidad de la piel.",

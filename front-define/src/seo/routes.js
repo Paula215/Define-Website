@@ -101,7 +101,7 @@ export const CATEGORIES = [
     label: 'Tratamientos Reductores y Estéticos',
     title: `Tratamientos Reductores Corporales en ${PLACE} | ${BRAND}`,
     description:
-      'Tratamientos corporales reafirmantes y bronceado para una piel más firme y uniforme en San Borja, Lima. Plan personalizado por zona.',
+      'Masajes reductores, tratamientos corporales reafirmantes y bronceado para moldear tu figura en San Borja, Lima. Plan personalizado por zona.',
     subs: [],
   },
 ];

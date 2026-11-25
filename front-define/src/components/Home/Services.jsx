@@ -11,7 +11,7 @@ const services = [
   { n: '02', img: lashing, t: 'Cejas, pestañas y micropigmentación', d: 'Realza tu mirada con diseño de cejas, extensiones de pestañas y micropigmentación de acabado natural.', to: '/services/cejas-pestanas-micropigmentacion' },
   { n: '03', img: rejuvenecimiento, t: 'Rejuvenecimiento', d: 'Tratamientos faciales personalizados para revitalizar la piel, mejorar su firmeza y devolverle luminosidad.', to: '/services/rejuvenecimiento' },
   { n: '04', img: depi, t: 'Depilación', d: 'Piel suave y libre de vello con técnicas seguras, higiénicas y efectivas para cada zona.', to: '/services/depilacion' },
-  { n: '05', img: body, t: 'Tratamientos reductores y estéticos', d: 'Protocolos corporales reafirmantes y bronceado para una piel más firme, uniforme y cuidada.', to: '/services/tratamientos-reductores-esteticos' },
+  { n: '05', img: body, t: 'Tratamientos reductores y estéticos', d: 'Moldea tu cuerpo con masajes reductores, protocolos reafirmantes y bronceado personalizados.', to: '/services/tratamientos-reductores-esteticos' },
 ];
 
 const Arrow = () => (
