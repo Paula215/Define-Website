@@ -1,15 +1,17 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo-sinfondo.png';
+import { BUSINESS, BUSINESS_DESCRIPTION, ADDRESS_FULL, HOURS_TEXT } from '../../seo/site';
 
+// Los datos del negocio van en texto (no en imagen) en todas las páginas: es lo
+// que leen Meta, Google y cualquier robot para saber quiénes somos.
 export default function Footer() {
   return (
     <footer>
       <div className="wrap foot">
         <div>
-          <img className="foot-logo" src={logo} alt="Define" />
-          <p style={{ marginTop: '1.25rem', maxWidth: '30ch' }}>
-            Studio especializado en micropigmentación y estética integral en San Borja, Lima.
-          </p>
+          <img className="foot-logo" src={logo} alt="Define Belleza Integral" />
+          <p className="foot-name">{`${BUSINESS.name} (${BUSINESS.shortName})`}</p>
+          <p style={{ marginTop: '.75rem', maxWidth: '38ch' }}>{BUSINESS_DESCRIPTION}</p>
         </div>
         <div className="fcol">
           <h4>Navegación</h4>
@@ -18,21 +20,25 @@ export default function Footer() {
           <Link to="/micropigmentacion-cejas-san-borja">Micropigmentación de cejas</Link>
           <Link to="/quien-soy">Nosotros</Link>
           <Link to="/contacto">Contacto</Link>
-          <Link to="/#proceso">Proceso</Link>
-          <Link to="/#galeria">Galería</Link>
+          <Link to="/politica-de-privacidad">Política de privacidad</Link>
+          <Link to="/terminos">Términos y condiciones</Link>
         </div>
         <div className="fcol">
           <h4>Contacto</h4>
-          <a href="tel:+51993186377">+51 993 186 377</a>
-          <a href="mailto:definebellezaintegral@gmail.com">definebellezaintegral@gmail.com</a>
-          <a href="https://wa.me/51993186377" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          <a href="https://www.instagram.com/define.belleza.integral" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://www.facebook.com/Define.Belleza.Integral" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <address>{ADDRESS_FULL}</address>
+          <a href={`tel:${BUSINESS.phone}`}>{`Teléfono / WhatsApp: ${BUSINESS.phoneDisplay}`}</a>
+          <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
+          <p>{HOURS_TEXT}</p>
+          <a href={BUSINESS.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href={BUSINESS.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href={BUSINESS.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
       </div>
       <div className="wrap fbot">
-        <span>© {new Date().getFullYear()} Define. Todos los derechos reservados.</span>
-        <span>Av. Aviación 3367, San Borja — Lima</span>
+        <span>{`© ${new Date().getFullYear()} ${BUSINESS.name}. Todos los derechos reservados.`}</span>
+        <span>
+          <Link to="/politica-de-privacidad">Privacidad</Link> · <Link to="/terminos">Términos</Link>
+        </span>
       </div>
     </footer>
   );

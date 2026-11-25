@@ -1,16 +1,24 @@
 // Genera una copia estática de index.html por cada URL indexable, con su
-// propio <head>, más el sitemap y el robots.txt.
+// propio <head> Y su contenido ya renderizado dentro de #root, más el sitemap
+// y el robots.txt.
 //
-// El sitio es una SPA: sin esto, todas las rutas devuelven el mismo HTML con
-// el mismo título, y quien lee el HTML sin ejecutar JavaScript —el rastreador
-// en su primera pasada, WhatsApp, Facebook, X— ve siempre la portada. Vercel
-// sirve el archivo del disco antes de aplicar el rewrite comodín, así que
-// /services/depilacion entrega su propio HTML y el router de React continúa
-// como siempre desde ahí.
+// El sitio es una SPA: sin esto, el <body> llega vacío y quien lee el HTML sin
+// ejecutar JavaScript —el rastreador de Meta/WhatsApp, Facebook, X, curl, la
+// primera pasada de Google— no ve ni los servicios ni los datos del negocio.
+// El contenido sale de dist-ssr/entry-server.js (build SSR de Vite) y en el
+// navegador React lo hidrata. Vercel sirve el archivo del disco antes de
+// aplicar el rewrite comodín, así que /services/depilacion entrega su propio
+// HTML y el router de React continúa como siempre desde ahí.
 import fs from 'fs';
 import path from 'path';
-import { ROUTES } from '../src/seo/routes.js';
-import { SITE_URL, SITE_NAME, LOCALE, OG_IMAGE, abs, businessLd, breadcrumbLd } from '../src/seo/site.js';
+import { pathToFileURL } from 'url';
+
+const SSR_ENTRY = path.resolve(process.cwd(), 'dist-ssr', 'entry-server.js');
+const { render, ROUTES, site } = await import(pathToFileURL(SSR_ENTRY).href);
+const {
+  SITE_URL, SITE_NAME, LOCALE, OG_IMAGE, abs, businessLd, breadcrumbLd,
+  BUSINESS, BUSINESS_DESCRIPTION, ADDRESS_FULL, HOURS_TEXT,
+} = site;
 
 const DIST = path.resolve(process.cwd(), 'dist');
 const START = '<!--seo-->';
@@ -49,7 +57,28 @@ const head = (route) => {
   ].join('\n');
 };
 
+// Resumen del negocio para quien navega sin JavaScript. El contenido completo
+// ya viene renderizado en #root; esto es un respaldo explícito.
+const noscript = [
+  '<noscript>',
+  '  <div style="max-width:720px;margin:2rem auto;padding:0 16px;font-family:Inter,sans-serif;line-height:1.6">',
+  `    <h2>${esc(BUSINESS.name)} (${esc(BUSINESS.shortName)})</h2>`,
+  `    <p>${esc(BUSINESS_DESCRIPTION)}</p>`,
+  `    <p>Dirección: ${esc(ADDRESS_FULL)}<br />`,
+  `    Teléfono / WhatsApp: <a href="tel:${esc(BUSINESS.phone)}">${esc(BUSINESS.phoneDisplay)}</a><br />`,
+  `    Correo: <a href="mailto:${esc(BUSINESS.email)}">${esc(BUSINESS.email)}</a><br />`,
+  `    Horario: ${esc(HOURS_TEXT)}</p>`,
+  `    <p><a href="/politica-de-privacidad">Política de privacidad</a> · <a href="/terminos">Términos y condiciones</a></p>`,
+  '  </div>',
+  '</noscript>',
+].join('\n');
+
+const ROOT = '<div id="root"></div>';
 const template = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
+if (!template.includes(ROOT)) {
+  console.error(`prerender: falta ${ROOT} en index.html`);
+  process.exit(1);
+}
 const from = template.indexOf(START);
 const to = template.indexOf(END);
 if (from === -1 || to === -1) {
@@ -58,7 +87,8 @@ if (from === -1 || to === -1) {
 }
 
 for (const route of ROUTES) {
-  const html = template.slice(0, from) + head(route) + template.slice(to + END.length);
+  const body = `<div id="root">${render(route.path)}</div>\n    ${noscript}`;
+  const html = (template.slice(0, from) + head(route) + template.slice(to + END.length)).replace(ROOT, () => body);
   const out =
     route.path === '/'
       ? path.join(DIST, 'index.html')

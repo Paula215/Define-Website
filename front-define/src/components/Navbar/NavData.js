@@ -88,12 +88,6 @@ export const NavLinks = [
         title: "Tratamientos Reductores y Estéticos", 
         link: "/services/tratamientos-reductores-esteticos",
         slug: "tratamientos-reductores-esteticos"
-      },
-      { 
-        id: "service-6", 
-        title: "Aplicaciones Intravenosas", 
-        link: "/services/aplicaciones-intravenosas",
-        slug: "aplicaciones-intravenosas"
       }
     ],
   },

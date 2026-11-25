@@ -9,7 +9,9 @@ import QuienSoy from './components/Pages/QuienSoy';
 import Contacto from './components/Pages/Contacto';
 import ServicesPage from './components/Pages/Service';
 import Micropigmentacion from './components/Pages/Micropigmentacion';
+import { PoliticaPrivacidad, Terminos } from './components/Pages/Legal';
 import { MICRO_PATH } from './seo/micropigmentacion';
+import { PLUM_PREFIXES } from './seo/routes';
 
 // Al navegar: arriba de todo, o al ancla si la URL trae hash (#servicios, #contacto…).
 const ScrollToLocation = () => {
@@ -54,17 +56,13 @@ const ScrollToLocation = () => {
   return null;
 };
 
-const Layout = () => {
+export const Layout = () => {
   const { pathname } = useLocation();
   // El hero del home y los banners de /services, /quien-soy y la landing de
   // micropigmentación son a sangre y
   // compensan ellos mismos el header fijo; el resto necesita el relleno.
   const isHome = pathname === '/';
-  const selfOffset =
-    isHome ||
-    pathname.startsWith('/services') ||
-    pathname.startsWith('/quien-soy') ||
-    pathname.startsWith(MICRO_PATH);
+  const selfOffset = isHome || PLUM_PREFIXES.some((p) => pathname.startsWith(p));
 
   return (
     <div className="overflow-x-hidden">
@@ -80,6 +78,8 @@ const Layout = () => {
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/quien-soy" element={<QuienSoy />} />
           <Route path={MICRO_PATH} element={<Micropigmentacion />} />
+          <Route path="/politica-de-privacidad" element={<PoliticaPrivacidad />} />
+          <Route path="/terminos" element={<Terminos />} />
         </Routes>
       </div>
       <Footer />

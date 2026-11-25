@@ -1,8 +1,8 @@
 // Datos únicos del negocio. Todo el SEO (meta tags, JSON-LD, sitemap) sale de
 // aquí, así que un cambio de dominio o de horario se toca en un solo sitio.
 
-// ⚠️ Al conectar el dominio propio, cambia SOLO esta línea.
-export const SITE_URL = 'https://define-website.vercel.app';
+// Dominio propio. Si cambia, se toca SOLO esta línea.
+export const SITE_URL = 'https://www.definebellezaintegral.com';
 
 export const SITE_NAME = 'Define Belleza Integral';
 export const LOCALE = 'es_PE';
@@ -17,6 +17,7 @@ export const OG_IMAGE =
 export const BUSINESS = {
   name: 'Define Belleza Integral',
   legalName: 'Definé Dermopigmentación',
+  shortName: 'Definé',
   street: 'Av. Aviación 3367, Galería Costa Azul, Studio 105',
   district: 'San Borja',
   city: 'Lima',
@@ -41,6 +42,14 @@ export const BUSINESS = {
   openingHours: [{ days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '09:00', closes: '20:00' }],
 };
 
+// Texto único de "quiénes somos": lo usan la home, el footer, el <noscript>
+// y el JSON-LD, para que todos digan exactamente lo mismo.
+export const BUSINESS_DESCRIPTION =
+  'Studio de belleza en San Borja, Lima, con más de 10 años en micropigmentación de cejas, labios y ojos, tricopigmentación, limpiezas faciales y peelings, lifting y extensiones de pestañas, rejuvenecimiento facial y depilación.';
+
+export const ADDRESS_FULL = `${BUSINESS.street}, ${BUSINESS.district}, ${BUSINESS.city}, Perú`;
+export const HOURS_TEXT = 'Lunes a sábado, 9:00 a 20:00';
+
 // El Home siempre con barra final, para que canonical, og:url y sitemap
 // apunten exactamente a la misma cadena.
 export const abs = (path = '/') => `${SITE_URL}${path === '/' ? '/' : path}`;
@@ -52,9 +61,8 @@ export const businessLd = () => ({
   '@type': 'BeautySalon',
   '@id': `${SITE_URL}/#business`,
   name: BUSINESS.name,
-  alternateName: BUSINESS.legalName,
-  description:
-    'Studio de belleza en San Borja, Lima especializado en micropigmentación de cejas (microblading, microshading y técnica híbrida) y maquillaje permanente, además de tratamientos faciales, rejuvenecimiento, depilación y estética corporal.',
+  alternateName: [BUSINESS.shortName, BUSINESS.legalName],
+  description: BUSINESS_DESCRIPTION,
   knowsAbout: [
     'Micropigmentación de cejas',
     'Microblading',
@@ -63,7 +71,13 @@ export const businessLd = () => ({
     'Maquillaje permanente',
     'Micropigmentación de labios',
     'Delineado permanente de ojos',
-    'Tratamientos faciales',
+    'Tricopigmentación',
+    'Limpieza facial',
+    'Peeling químico',
+    'Lifting de pestañas',
+    'Extensiones de pestañas',
+    'Rejuvenecimiento facial',
+    'Depilación',
   ],
   url: abs('/'),
   image: OG_IMAGE,

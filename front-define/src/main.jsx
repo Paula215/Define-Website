@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import './index.css'
 import './styles/define.css'
 import './styles/servicios.css'
@@ -7,8 +7,14 @@ import './styles/quien-soy.css'
 import './styles/micropigmentacion.css'
 import App from './App.jsx'
 
-createRoot(document.getElementById('root')).render(
+const root = document.getElementById('root')
+const app = (
   <StrictMode>
     <App />
-  </StrictMode>,
+  </StrictMode>
 )
+
+// En producción #root ya trae el HTML prerenderizado (scripts/prerender.js):
+// React lo "hidrata" en vez de volver a pintarlo. En `vite dev` llega vacío.
+if (root.hasChildNodes()) hydrateRoot(root, app)
+else createRoot(root).render(app)

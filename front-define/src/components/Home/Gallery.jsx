@@ -1,11 +1,10 @@
 import peeling from '../../assets/images/services/faciales/peeling1-1.jpg';
-import meso from '../../assets/images/services/reductores/mesoterapia.png';
 import bronce from '../../assets/images/services/reductores/bronceado.png';
 
 /* Nota: cuando tengas fotos propias del studio, reemplaza estas tres. */
 const shots = [
   { src: peeling, alt: 'Tratamiento facial para acné' },
-  { src: meso, alt: 'Sesión de mesoterapia corporal' },
+  { src: 'https://res.cloudinary.com/ddjy2qnvw/image/upload/c_fill,w_800,h_1000,g_auto,q_auto,f_auto/v1767586538/micropigmentacion_u6shwa.jpg', alt: 'Micropigmentación de cejas pelo a pelo' },
   { src: bronce, alt: 'Bronceado corporal' },
 ];
 

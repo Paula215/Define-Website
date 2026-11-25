@@ -2,7 +2,11 @@
 // descripción: si se repiten, Google elige una sola página y descarta el resto
 // como contenido duplicado.
 import { OG_IMAGE, breadcrumbLd } from './site.js';
-import { microRoute } from './micropigmentacion.js';
+import { microRoute, MICRO_PATH } from './micropigmentacion.js';
+
+// Rutas con banda morada a sangre arriba: compensan ellas mismas el header fijo
+// y llevan el header invertido a blanco.
+export const PLUM_PREFIXES = ['/services', '/quien-soy', MICRO_PATH, '/politica-de-privacidad', '/terminos'];
 
 const BRAND = 'Define';
 const PLACE = 'San Borja, Lima';
@@ -66,7 +70,7 @@ export const CATEGORIES = [
     label: 'Rejuvenecimiento',
     title: `Rejuvenecimiento Facial en ${PLACE} | ${BRAND}`,
     description:
-      'Tratamientos de rejuvenecimiento facial para arrugas, flacidez y pérdida de firmeza en San Borja, Lima. Resultados progresivos y naturales.',
+      'Planes faciales personalizados para revitalizar la piel, mejorar su firmeza y devolverle luminosidad en San Borja, Lima. Evaluación sin costo.',
     subs: [],
   },
   {
@@ -97,24 +101,16 @@ export const CATEGORIES = [
     label: 'Tratamientos Reductores y Estéticos',
     title: `Tratamientos Reductores Corporales en ${PLACE} | ${BRAND}`,
     description:
-      'Mesoterapia, carboxiterapia y protocolos reductores y reafirmantes para moldear tu figura en San Borja, Lima. Plan personalizado por zona.',
-    subs: [],
-  },
-  {
-    slug: 'aplicaciones-intravenosas',
-    label: 'Aplicaciones Intravenosas',
-    title: `Sueroterapia y Vitaminas Intravenosas en San Borja | ${BRAND}`,
-    description:
-      'Cócteles vitamínicos y sueroterapia para energía, defensas y luminosidad de la piel, aplicados por personal capacitado en San Borja, Lima.',
+      'Tratamientos corporales reafirmantes y bronceado para una piel más firme y uniforme en San Borja, Lima. Plan personalizado por zona.',
     subs: [],
   },
 ];
 
 const HOME = {
   path: '/',
-  title: 'Define | Micropigmentación de Cejas y Microblading en San Borja, Lima',
+  title: 'Define Belleza Integral | Micropigmentación y Estética en San Borja, Lima',
   description:
-    'Studio en San Borja con más de 10 años en micropigmentación de cejas: microblading, microshading y maquillaje permanente natural. También faciales y depilación.',
+    'Studio de belleza en San Borja con más de 10 años en micropigmentación de cejas, labios y ojos, pestañas, limpiezas faciales, peelings y depilación. Lun–sáb 9:00–20:00.',
   breadcrumb: [{ name: 'Inicio', path: '/' }],
 };
 
@@ -124,7 +120,7 @@ const STATIC_ROUTES = [
     path: '/services',
     title: `Servicios de Estética y Belleza en ${PLACE} | ${BRAND}`,
     description:
-      'Micropigmentación, limpiezas faciales, rejuvenecimiento, depilación, tratamientos reductores y sueroterapia. Todos los servicios de Define en San Borja, Lima.',
+      'Micropigmentación, extensiones y lifting de pestañas, limpiezas faciales y peelings, rejuvenecimiento facial, depilación y tratamientos corporales en San Borja, Lima.',
     breadcrumb: [
       { name: 'Inicio', path: '/' },
       { name: 'Servicios', path: '/services' },
@@ -148,6 +144,28 @@ const STATIC_ROUTES = [
     breadcrumb: [
       { name: 'Inicio', path: '/' },
       { name: 'Contacto', path: '/contacto' },
+    ],
+  },
+  {
+    path: '/politica-de-privacidad',
+    title: `Política de Privacidad | ${BRAND} Belleza Integral`,
+    description:
+      'Cómo Define Belleza Integral recoge, usa y protege tus datos personales (nombre, teléfono y correo) conforme a la Ley N.º 29733 de Protección de Datos Personales del Perú.',
+    priority: 0.3,
+    breadcrumb: [
+      { name: 'Inicio', path: '/' },
+      { name: 'Política de privacidad', path: '/politica-de-privacidad' },
+    ],
+  },
+  {
+    path: '/terminos',
+    title: `Términos y Condiciones del Servicio | ${BRAND} Belleza Integral`,
+    description:
+      'Términos del servicio de Define Belleza Integral en San Borja: reservas por WhatsApp, cancelaciones, reprogramaciones y consulta inicial sin costo.',
+    priority: 0.3,
+    breadcrumb: [
+      { name: 'Inicio', path: '/' },
+      { name: 'Términos y condiciones', path: '/terminos' },
     ],
   },
 ];

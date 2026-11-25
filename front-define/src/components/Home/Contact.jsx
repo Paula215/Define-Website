@@ -1,3 +1,5 @@
+import { BUSINESS, ADDRESS_FULL, HOURS_TEXT } from '../../seo/site';
+
 const MAP_SRC = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975.2780305790475!2d-77.001136!3d-12.1044761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7e69d78fe31%3A0x5ea94e8f49664191!2sDefin%C3%A9%20Dermopigmentaci%C3%B3n!5e0!3m2!1ses!2spe!4v1738299709487';
 
 export default function Contact() {
@@ -15,16 +17,24 @@ export default function Contact() {
           <div className="rv">
             <div className="info">
               <div className="info-row">
+                <div className="k">Nombre</div>
+                <div className="v">{`${BUSINESS.name} (${BUSINESS.shortName})`}</div>
+              </div>
+              <div className="info-row">
                 <div className="k">Dirección</div>
-                <div className="v">Av. Aviación N° 3367 — San Borja<br />Galería Costa Azul, Studio N° 105</div>
+                <div className="v"><address style={{ fontStyle: 'normal' }}>{ADDRESS_FULL}</address></div>
               </div>
               <div className="info-row">
                 <div className="k">Teléfono</div>
-                <div className="v"><a href="tel:+51993186377">+51 993 186 377</a></div>
+                <div className="v"><a href={`tel:${BUSINESS.phone}`}>{BUSINESS.phoneDisplay}</a></div>
+              </div>
+              <div className="info-row">
+                <div className="k">Correo</div>
+                <div className="v"><a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a></div>
               </div>
               <div className="info-row">
                 <div className="k">Horario</div>
-                <div className="v">Lunes a sábado<br />9:00 — 20:00</div>
+                <div className="v">{HOURS_TEXT}</div>
               </div>
             </div>
             <div className="socials">
