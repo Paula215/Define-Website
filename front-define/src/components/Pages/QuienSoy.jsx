@@ -74,7 +74,7 @@ export default function QuienSoy() {
           <p className="eyebrow">Agenda tu cita</p>
           <h2 className="d">Conversemos sobre lo que buscas</h2>
           <p>Te damos un diagnóstico honesto y una recomendación clara, sin compromiso.</p>
-          <a href="https://wa.me/51958336208" target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+          <a href="https://wa.me/51993186377" target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
             Escribir por WhatsApp
           </a>
         </div>

@@ -23,9 +23,9 @@ export default function Footer() {
         </div>
         <div className="fcol">
           <h4>Contacto</h4>
-          <a href="tel:+51958336208">+51 958 336 208</a>
+          <a href="tel:+51993186377">+51 993 186 377</a>
           <a href="mailto:definebellezaintegral@gmail.com">definebellezaintegral@gmail.com</a>
-          <a href="https://wa.me/51958336208" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="https://wa.me/51993186377" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           <a href="https://www.instagram.com/define.belleza.integral" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="https://www.facebook.com/Define.Belleza.Integral" target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>

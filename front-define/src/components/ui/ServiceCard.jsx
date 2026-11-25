@@ -27,7 +27,7 @@ export default function ServiceCard({ service, eager = false }) {
     }, 180);
   };
 
-  const wa = `https://wa.me/51958336208?text=${encodeURIComponent(`Hola, estoy interesado/a en el servicio de ${service.title}`)}`;
+  const wa = `https://wa.me/51993186377?text=${encodeURIComponent(`Hola, estoy interesado/a en el servicio de ${service.title}`)}`;
 
   return (
     <article className="svc">

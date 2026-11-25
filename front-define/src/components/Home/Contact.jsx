@@ -20,7 +20,7 @@ export default function Contact() {
               </div>
               <div className="info-row">
                 <div className="k">Teléfono</div>
-                <div className="v"><a href="tel:+51958336208">+51 958 336 208</a></div>
+                <div className="v"><a href="tel:+51993186377">+51 993 186 377</a></div>
               </div>
               <div className="info-row">
                 <div className="k">Horario</div>
@@ -28,7 +28,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="socials">
-              <a href="https://wa.me/51958336208" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <a href="https://wa.me/51993186377" target="_blank" rel="noopener noreferrer">WhatsApp</a>
               <a href="https://www.instagram.com/define.belleza.integral" target="_blank" rel="noopener noreferrer">Instagram</a>
               <a href="https://www.facebook.com/Define.Belleza.Integral" target="_blank" rel="noopener noreferrer">Facebook</a>
             </div>

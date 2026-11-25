@@ -20,7 +20,7 @@ export default function Hero() {
           </p>
           <div className="hero-actions">
             <a href="#servicios" className="btn btn-solid">Ver servicios</a>
-            <a href="https://wa.me/51958336208" target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ color: 'var(--plum)' }}>Agendar cita</a>
+            <a href="https://wa.me/51993186377" target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ color: 'var(--plum)' }}>Agendar cita</a>
           </div>
         </div>
         <div className="rv" style={{ transitionDelay: '.12s' }}>

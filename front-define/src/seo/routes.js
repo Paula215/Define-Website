@@ -144,7 +144,7 @@ const STATIC_ROUTES = [
     path: '/contacto',
     title: `Contacto y Ubicación | ${BRAND} ${PLACE}`,
     description:
-      'Estamos en Av. Aviación 3367, Galería Costa Azul, San Borja. Lunes a sábado de 9:00 a 20:00. Escríbenos al +51 958 336 208 para agendar tu cita.',
+      'Estamos en Av. Aviación 3367, Galería Costa Azul, San Borja. Lunes a sábado de 9:00 a 20:00. Escríbenos al +51 993 186 377 para agendar tu cita.',
     breadcrumb: [
       { name: 'Inicio', path: '/' },
       { name: 'Contacto', path: '/contacto' },

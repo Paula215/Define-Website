@@ -7,7 +7,7 @@ import { useNavbarState } from './useNavbarState';
 import logo from '../../assets/images/logo-sinfondo.png';
 import { MICRO_PATH } from '../../seo/micropigmentacion';
 
-const WHATSAPP = 'https://wa.me/51958336208';
+const WHATSAPP = 'https://wa.me/51993186377';
 
 const Navbar = () => {
   const {
